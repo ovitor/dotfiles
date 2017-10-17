@@ -1,0 +1,31 @@
+#!/bin/bash
+
+BASEDIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+USER=vitor
+
+# pacman 
+bash ${BASEDIR}/pacman/install.sh
+
+# gitfiles
+ln -s ${BASEDIR}/gitfiles/gitconfig ~/.gitconfig
+
+# ntp.br
+sudo bash ${BASEDIR}/ntp/install.sh
+
+# vimfiles
+ln -s ${BASEDIR}/vim ~/.vim
+vim -c 'PluginInstall' -c 'qa!'
+
+# zsh
+bash ${BASEDIR}/zshrc/install.sh
+rm ~/.zshrc
+ln -s ${BASEDIR}/zshrc/zshrc ~/.zshrc
+
+# i3 and i3blocks
+ln -s ${BASEDIR}/.config/i3 ~/.config/i3
+
+# archlinux 
+bash ${BASEDIR}/archlinux/post-installation.sh $USER
+
+# pacaur using other user
+su -u $USER -c 'bash ${BASEDIR}/pacaur/install.sh'

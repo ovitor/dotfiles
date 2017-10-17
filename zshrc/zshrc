@@ -1,0 +1,26 @@
+# Path to your oh-my-zsh installation.
+export ZSH=/home/vitor/.oh-my-zsh
+
+# Set name of the theme to load.
+ZSH_THEME="daveverwer"
+
+# Uncomment the following line to use hyphen-insensitive completion. Case
+# sensitive completion must be off. _ and - will be interchangeable.
+HYPHEN_INSENSITIVE="true"
+
+# Uncomment the following line to enable command auto-correction.
+ENABLE_CORRECTION="true"
+
+# Loading plugins
+plugins=(git httpie)
+
+# User configuration
+source $ZSH/oh-my-zsh.sh > /dev/null 2>&1
+# env vars
+source ~/.dotfiles/env/env.sh > /dev/null 2>&1
+# aliases
+source ~/.dotfiles/alias/alias.sh > /dev/null 2>&1
+
+export LC_ALL=en_US.UTF-8
+export LANG=en_US.UTF-8
+

@@ -1,0 +1,64 @@
+"Charset Config"
+scriptencoding utf-8
+set encoding=utf-8
+set nocompatible
+filetype off
+
+"Source files"
+source ~/.vim/projects.vim
+source ~/.vim/vundle.vim
+source ~/.vim/plugins.vim
+
+"Tabs
+map tp :tabprevious <cr>
+map tn :tabnext <cr>
+
+"Mapping belkin keys
+":imap qq <Esc> 
+
+"General Config"
+syntax on
+colorscheme dracula
+set number
+set backspace=indent,eol,start
+set showmode
+set nowrap
+set hlsearch
+set laststatus=2
+filetype plugin on
+set noerrorbells visualbell t_vb=
+
+"General maps
+nnoremap qq <C-w>w
+
+"Turn Off Swap Files"
+set noswapfile
+set nobackup
+set nowb
+
+"Tex options"
+let g:tex_flavor = 'tex'
+let maplocalleader = "\\"
+
+"Indentation Config"
+set autoindent
+set smartindent
+set smarttab
+set shiftwidth=2
+set softtabstop=2
+set tabstop=2
+set expandtab
+set showmatch
+
+"Scrolling Config"
+set scrolloff=8
+set sidescrolloff=15
+set sidescroll=1
+
+"Changing make options"
+augroup auto_make
+    autocmd!
+    "autocmd BufWritePost * silent make
+    autocmd QuickFixCmdPost *make* cwindow
+augroup END
+
