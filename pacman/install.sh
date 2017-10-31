@@ -25,6 +25,7 @@ pacman -S --noconfirm \
 pacman -S --noconfirm \
   i3 i3blocks zsh \
   rxvt-unicode urxvt-perls \
+  exfat-utils \
   rofi feh compton awesome-terminal-fonts \
 
 # Audio and Video
