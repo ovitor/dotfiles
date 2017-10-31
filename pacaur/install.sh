@@ -33,4 +33,5 @@ pacaur -S --noconfirm \
   xflux \
   telegram-desktop-bin \
   i3lock-fancy-git \
+  keeweb-desktop \
   
