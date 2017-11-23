@@ -1,4 +1,4 @@
-#DS_Store files
+# DS_Store files
 *.DS_Store*
 
 # SSH related files
@@ -14,3 +14,6 @@
 # vim things
 vim/.netrwhist
 vim/bundle/*
+
+# Tokens
+tokens
