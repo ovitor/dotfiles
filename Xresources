@@ -1,15 +1,15 @@
 URxvt*geometry: 115x40
-URxvt*font: xft:Inconsolata:size=12:antialias=true:hinting=true
-URxvt*boldFont: xft:Inconsolata:bold:size=12:antialias=false:hinting=true
+URxvt*font: xft:Ubuntu Mono:size=14:antialias=true:hinting=true
+URxvt*boldFont: xft:Ubuntu Mono:bold:size=14:antialias=true:hinting=true
 URxvt*depth: 24
 URxvt*borderless: 1
 URxvt*scrollBar: false
-URxvt*saveLines: 2000
-URxvt.transparent: true
+URxvt*saveLines: 5000
+URxvt.transparent: false 
 URxvt*.shading: 10
 
 ! Meta modifier for keybindings
-!URxvt.modifier: super
+URxvt.modifier: 0xfe03 
 
 !! perl extensions
 URxvt.perl-ext:             default,url-select,clipboard
@@ -49,5 +49,5 @@ URxvt*colorUL: #86a2b0
 *.color6:     #8BE9FD
 *.color14:    #9AEDFE
 *.color7:     #BFBFBF
-*.color15: #E6E6E6
+*.color15:    #E6E6E6
 
