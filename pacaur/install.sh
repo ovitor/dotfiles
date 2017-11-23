@@ -32,6 +32,9 @@ pacaur -Suy
 pacaur -S --noconfirm \
   xflux \
   telegram-desktop-bin \
+  slack-desktop \
+  whatsapp-desktop \
   i3lock-fancy-git \
   keeweb-desktop \
+  bashmount \
   
