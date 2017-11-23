@@ -7,25 +7,28 @@ USER=vitor
 bash ${BASEDIR}/pacman/install.sh
 
 # gitfiles
-ln -s ${BASEDIR}/gitfiles/gitconfig ~/.gitconfig
+ln -s ${BASEDIR}/gitfiles/gitconfig /home/$USER/.gitconfig
 
 # ntp.br
 sudo bash ${BASEDIR}/ntp/install.sh
 
 # vimfiles
-ln -s ${BASEDIR}/vim ~/.vim
+ln -s ${BASEDIR}/vim /home/$USER/.vim
 vim -c 'PluginInstall' -c 'qa!'
 
 # zsh
 bash ${BASEDIR}/zshrc/install.sh
 rm ~/.zshrc
-ln -s ${BASEDIR}/zshrc/zshrc ~/.zshrc
+ln -s ${BASEDIR}/zshrc/zshrc /home/$USER/.zshrc
 
-# i3 and i3blocks
-ln -s ${BASEDIR}/.config/i3 ~/.config/i3
+# config directory
+ln -s ${BASEDIR}/.config /home/$USER/.config
 
 # archlinux 
 bash ${BASEDIR}/archlinux/post-installation.sh $USER
 
 # pacaur using other user
 su -u $USER -c 'bash ${BASEDIR}/pacaur/install.sh'
+
+# xresources
+ln -s ${BASEDIR}/Xresources /home/$USER/.Xresources
