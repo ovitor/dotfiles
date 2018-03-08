@@ -1,8 +1,27 @@
 # i3 config file (v4)
 # Please see https://i3wm.org/docs/userguide.html for a complete reference!
 
-set $mod Mod1
-font pango:Ubuntu 11
+set $mod Mod4
+font pango:Fira Mono 8 
+
+# general variables
+set $browser  firefox
+set $term     urxvt
+
+# window edge
+for_window [class="^.*"] border pixel 0
+for_window [title="^.*"] border pixel 0
+
+# gaps
+set $inner 8 
+set $outer 12
+
+gaps inner $inner
+gaps outer $outer
+
+# gap toggle
+bindsym $mod+g exec compton; gaps inner all set $inner; gaps outer all set $outer
+bindsym $mod+Ctrl+g exec pkill compton; gaps inner all set 0; gaps outer all set 0
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
@@ -40,10 +59,10 @@ bindsym $mod+Shift+Up move up
 bindsym $mod+Shift+Right move right
 
 # split in horizontal orientation
-bindsym $mod+Control+h split h
+bindsym $mod+b split h
 
 # split in vertical orientation
-bindsym $mod+Control+v split v
+bindsym $mod+v split v
 
 # enter fullscreen mode for the focused container
 bindsym $mod+f fullscreen toggle
@@ -174,29 +193,30 @@ client.urgent 		$urgent-bg-color    $urgent-bg-color   $text-color    	    $bg-c
 
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
-bar {
-        status_command i3blocks -c ~/.config/i3/i3blocks.conf
-	tray_output none
-	binding_mode_indicator no
-	font pango:Ubuntu, FontAwesome 11
-	colors {
-		background $bg-color
-	    	separator #757575
-		#                  border             background         text
-		focused_workspace  $bg-color          $bg-color          $text-color
-		inactive_workspace $inactive-bg-color $inactive-bg-color $inactive-text-color
-		urgent_workspace   $urgent-bg-color   $urgent-bg-color   $text-color
-	}
-}
+#bar {
+#  status_command i3blocks -c ~/.config/i3/i3blocks.conf
+#	tray_output none
+#	binding_mode_indicator no
+#	font pango:Fira, FontAwesome 11
+#	colors {
+#		background $bg-color
+#	    	separator #757575
+#		#                  border             background         text
+#		focused_workspace  $bg-color          $bg-color          $text-color
+#		inactive_workspace $inactive-bg-color $inactive-bg-color $inactive-text-color
+#		urgent_workspace   $urgent-bg-color   $urgent-bg-color   $text-color
+#	}
+#}
 
 # other configs
+bindsym $mod+d exec notify-send "Hora agora.." "`date`"
 
 # lock computer 
-bindsym $mod+Shiftx exec i3lock-fancy -f Ubuntu 
+bindsym $mod+Shiftx exec i3lock-fancy -f Office Code Pro 
 
 # launcher
 #bindsym $mod+space exec --no-startup-id rofi -show run -width 400 -lines 3 -font "Ubuntu 11" -separator-style "none" 
-bindsym $mod+space exec --no-startup-id rofi -show drun rofi -show run -width 400 -lines 3 -font "Ubuntu 11" -separator-style "none" #-theme .config/rofi/themes/purple.rasi
+bindsym $mod+space exec --no-startup-id rofi -show drun 
 
 # default mod+tab 
 bindsym $mod+Tab workspace next
@@ -225,16 +245,12 @@ bindsym XF86AudioPause exec playerctl pause
 bindsym XF86AudioNext exec playerctl next
 bindsym XF86AudioPrev exec playerctl previous
 
-# enabling external monitor
-exec optirun true
-exec intel-virtual-output
-#exec xrandr --output VIRTUAL2 --off --output VIRTUAL1 --mode VIRTUAL1.637-1920x1080 --pos 1920x0 --rotate normal --output DP1 --off --output HDMI1 --off --output LVDS1 --primary --mode 1920x1080 --pos 0x0 --rotate normal --output VGA1 --off
-
 # setting keyboard layout
 exec --no-startup-id setxkbmap -layout br
 
 # executing applications
 exec_always feh --bg-fill ~/.wallpaper.jpg 
+
 exec firefox
-exec_always compton -f
+exec_always compton --config ~/.config/compton.conf 
 exec xflux -l -3.731862 -g -38.526669
