@@ -7,22 +7,22 @@ USER=vitor
 bash ${BASEDIR}/pacman/install.sh
 
 # gitfiles
-ln -s ${BASEDIR}/gitfiles/gitconfig /home/$USER/.gitconfig
+ln -sf ${BASEDIR}/gitfiles/gitconfig /home/$USER/.gitconfig
 
 # ntp.br
 sudo bash ${BASEDIR}/ntp/install.sh
 
 # vimfiles
-ln -s ${BASEDIR}/vim /home/$USER/.vim
+ln -sf ${BASEDIR}/vim /home/$USER/.vim
 vim -c 'PluginInstall' -c 'qa!'
 
 # zsh
 bash ${BASEDIR}/zshrc/install.sh
 rm ~/.zshrc
-ln -s ${BASEDIR}/zshrc/zshrc /home/$USER/.zshrc
+ln -sf ${BASEDIR}/zshrc/zshrc /home/$USER/.zshrc
 
 # config directory
-ln -s ${BASEDIR}/.config /home/$USER/.config
+ln -sf ${BASEDIR}/.config /home/$USER/.config
 
 # archlinux 
 bash ${BASEDIR}/archlinux/post-installation.sh $USER
@@ -31,4 +31,4 @@ bash ${BASEDIR}/archlinux/post-installation.sh $USER
 su -u $USER -c 'bash ${BASEDIR}/pacaur/install.sh'
 
 # xresources
-ln -s ${BASEDIR}/Xresources /home/$USER/.Xresources
+ln -sf ${BASEDIR}/Xresources /home/$USER/.Xresources
