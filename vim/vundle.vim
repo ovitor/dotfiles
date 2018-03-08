@@ -15,6 +15,10 @@ Plugin 'aklt/plantuml-syntax'
 Plugin 'editorconfig/editorconfig-vim'
 Plugin 'dracula/vim'
 Plugin 'jistr/vim-nerdtree-tabs'
+Plugin 'junegunn/fzf'
+Plugin 'posva/vim-vue'
+Plugin 'valloric/youcompleteme'
+Plugin 'honza/vim-snippets'
 
 call vundle#end()
 filetype plugin indent on

@@ -29,6 +29,7 @@ filetype plugin on
 set noerrorbells visualbell t_vb=
 
 "General maps
+map fz :FZF<cr>
 nnoremap qq <C-w>w
 
 "Turn Off Swap Files"
