@@ -12,7 +12,7 @@ HYPHEN_INSENSITIVE="true"
 ENABLE_CORRECTION="true"
 
 # Loading plugins
-plugins=(git httpie)
+plugins=(git git-flow httpie)
 
 # User configuration
 source $ZSH/oh-my-zsh.sh > /dev/null 2>&1
