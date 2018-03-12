@@ -1,0 +1,10 @@
+[Desktop Entry]
+Version=1.0
+Name=Shutdown
+Type=Application
+Comment=Shutdown system with poweroff 
+Terminal=false
+Exec=poweroff
+Categories=Application;
+GenericName=Shutdown system
+Keywords=system;shutdown

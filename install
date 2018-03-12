@@ -24,6 +24,9 @@ ln -sf ${BASEDIR}/zshrc/zshrc /home/$USER/.zshrc
 # config directory
 ln -sf ${BASEDIR}/.config /home/$USER/.config
 
+# local user share applications
+ln -sf ${BASEDIR}/.local/share/applications /home/$USER/.local/share/applications
+
 # archlinux 
 bash ${BASEDIR}/archlinux/post-installation.sh $USER
 

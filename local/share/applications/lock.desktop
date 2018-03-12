@@ -1,0 +1,10 @@
+[Desktop Entry]
+Version=1.0
+Name=Lock
+Type=Application
+Comment=Lock system with i3lock
+Terminal=false
+Exec=i3lock-fancy -d
+Categories=Application;
+GenericName=Lock system
+Keywords=system;lock
