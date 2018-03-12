@@ -1,0 +1,10 @@
+# Ignore everything
+*
+
+!.gitignore
+!dunst
+!i3
+!rofi
+!zathura
+!compton.conf
+!user-dirs.dirs
