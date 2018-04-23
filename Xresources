@@ -13,13 +13,17 @@ URxvt.letterSpace: 0
 URxvt.modifier: 0xfe03 
 
 !! perl extensions
-URxvt.perl-ext:             default,url-select,clipboard
+URxvt.perl-ext-common: default,url-select,clipboard,matcher
+
+!! browse links
+URxvt.url-launcher: /usr/bin/xdg-open
+URxvt.matcher.button: 1
 
 ! url-select (part of urxvt-perls package)
 URxvt.keysym.M-u:           perl:url-select:select_next
 URxvt.url-select.autocopy:  true
 URxvt.url-select.button:    2
-URxvt.url-select.launcher:  chromium
+URxvt.url-select.launcher:  firefox 
 URxvt.url-select.underline: true
 
 ! Nastavuje kopirovani

@@ -16,5 +16,5 @@ let g:makeshift_chdir = 1
 let g:vimtex_compiler_latexmk = {'callback' : 0}
 
 "Markdown preview configuration"
-let vim_markdown_preview_github=1
+let vim_markdown_preview_github=0
 let vim_markdown_preview_browser='Firefox'
