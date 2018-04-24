@@ -87,19 +87,27 @@ bindsym $mod+a focus parent
 # workspace variables
 
 # web
-set $workspace1 "1 &#xf269;" 
+#set $workspace1 "1 &#xf269;" 
 # terminal
-set $workspace2 "2 &#xf120;" 
+#set $workspace2 "2 &#xf120;" 
 # whatsapp 
-set $workspace3 "3 &#xf232;" 
+#set $workspace3 "3 &#xf232;" 
 # telegram 
-set $workspace4 "4 &#xf2c6;" 
+#set $workspace4 "4 &#xf2c6;" 
 # slack
-set $workspace5 "5 &#xf198;" 
+#set $workspace5 "5 &#xf198;" 
 # zathura 
-set $workspace6 "6 &#xf0f6;" 
+#set $workspace6 "6 &#xf0f6;" 
 # song
-set $workspace0 "10 &#xf01d;" 
+#set $workspace0 "10 &#xf01d;" 
+
+set $workspace1 "1 " 
+set $workspace2 "2 " 
+set $workspace3 "3 " 
+set $workspace4 "4 " 
+set $workspace5 "5 " 
+set $workspace6 "6 " 
+set $workspace0 "10 " 
 
 # switch to workspace
 bindsym $mod+1 workspace $workspace1 
@@ -127,18 +135,18 @@ bindsym $mod+Shift+0 move container to workspace $workspace0
 
 # open applications in their workspaces
 assign [class="Firefox"] $workspace1
-assign [class="whatsapp-desktop"] $workspace3
-assign [class="TelegramDesktop"] $workspace4
-assign [class="Slack"] $workspace5
-assign [class="Zathura"] $workspace6
-assign [class="Rhythmbox"] $workspace0
+#assign [class="whatsapp-desktop"] $workspace3
+#assign [class="TelegramDesktop"] $workspace4
+#assign [class="Slack"] $workspace5
+#assign [class="Zathura"] $workspace6
+#assign [class="Rhythmbox"] $workspace0
 
 # windows in floating mode
 for_window [class="mpv"] floating enable
 for_window [class="feh"] floating enable 
 for_window [class="feh"] resize set 1750 890 
 for_window [class="feh"] move absolute position center
-for_window [class="Wine"] floating enable
+#for_window [class="Wine"] floating enable
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
