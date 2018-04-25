@@ -26,31 +26,38 @@ pacman -S --noconfirm \
   i3 i3blocks zsh \
   rxvt-unicode urxvt-perls \
   exfat-utils xdg-user-dirs \
-  rofi feh dunst compton awesome-terminal-fonts \
+  rofi feh dunst compton \ 
+  ttf-fira-sans awesome-terminal-fonts \
 
 # Audio and Video
 pacman -S  --noconfirm \
   alsa-utils \
   pulseaudio-alsa \
-  mpv
+  mpv mpc mpd ncmpcpp 
 
 # Miscellaneous 
 pacman -S --noconfirm \
-  htop aria2 httpie nmap \
+  htop aria2 httpie nmap 
+  gnu-netcat tcpdump \
   youtube-dl p7zip unrar tree \
-  speedtest-cli keybase pwgen \
-  git git-flow git-lfs \
-  terraform ansible \
-  docker docker-compose \
-  openssh screen grep  \
+  speedtest-cli keybase \
   aspell aspell-pt aspell-en \
-  vim pavucontrol maim \
-  nmap \
+  pavucontrol maim picocom \
+  nmap ranger unzip \
 
 # Other applications
 pacman -S --noconfirm \
   firefox \
+  wireshark-qt \
   transmission-cli \
   zathura zathura-pdf-mupdf
+
+# Dev and Sysadmin applications
+pacman -S --noconfirm \
+  git git-flow git-lfs \
+  terraform ansible pwgen \
+  docker docker-compose \
+  openssh screen grep  \
+  vim fzf python-markdown
 
 exit 0
