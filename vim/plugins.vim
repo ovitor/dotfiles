@@ -8,6 +8,7 @@ autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0]) && !exists("s:std_in
 
 "NERDTreeTabs configuration"
 map ff :NERDTreeTabsToggle<CR>
+let NERDTreeShowHidden=1
 
 "Makeshift configuration"
 let g:makeshift_chdir = 1
