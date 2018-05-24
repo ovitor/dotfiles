@@ -6,7 +6,7 @@ font pango:Fira Mono 8
 
 # general variables
 set $browser  firefox
-set $term     urxvt
+set $term     termite 
 
 # window edge
 for_window [class="^.*"] border pixel 0

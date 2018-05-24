@@ -1,7 +1,11 @@
 URxvt*geometry: 115x40
-URxvt*font: xft:Fira Mono:size=10:antialias=true:hinting=true,xft:FontAwesome:size=10
-URxvt*boldFont: xft:Fira Mono:bold:size=10:antialias=true:hinting=true
-URxvt*depth: 24
+!URxvt*font: xft:Fira Mono:size=10:antialias=true:hinting=true,xft:FontAwesome:style=Regular:size=10
+!URxvt*boldFont: xft:Fira Mono:bold:size=10:antialias=true:hinting=true
+!
+!Fira Sans:style=Regular
+URxvt*font: xft:FuraCode Nerd Font Mono:style=Regular:size=10
+URxvt*boldFont: xft:FuraCode Nerd Font Mono:style=Bold:size=10
+URxvt*depth: 32
 URxvt*borderless: 1
 URxvt*scrollBar: false
 URxvt*saveLines: 5000
