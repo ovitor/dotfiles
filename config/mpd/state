@@ -1,8 +1,6 @@
 sw_volume: 100
 audio_device_state:1:default detected output
-state: pause
-current: 11
-time: 369.011000
+state: stop
 random: 0
 repeat: 0
 single: 0
@@ -25,4 +23,24 @@ playlist_begin
 11:Pink Floyd/Pink Floyd - Time (Lyrics included)-rL3AgkwbYgo.aac
 12:Pink Floyd/Pink Floyd - Wish You Were Here-217JOBWTolg.aac
 13:Pink Floyd/Pink Floyd-Hey You {Music Video}-DEDjF2tLbhk.aac
+14:Ramones/baby i love you -the ramones-VQdOyN9_5k8.aac
+15:Ramones/RAMONES - Beat on the Brat-3HUGeA2lur4.aac
+16:Ramones/Ramones - 'Sheena is a Punk Rocker' (Subtitulada en Español)-7vNrZcs44QU.aac
+17:Ramones/RAMONES - Blitzkrieg Bop-c1BOsShTyng.aac
+18:Ramones/RAMONES - Cretin Hop-7ymeuOz0hZU.aac
+19:Ramones/RAMONES - Do You Remember Rock 'N Roll Radio-loFLdYM79gY.aac
+20:Ramones/RAMONES - I Just Want To Have Something To Do-sPYGCxco56I.aac
+21:Ramones/RAMONES - I Wanna Be Sedated-JBN1CkyRzmE.aac
+22:Ramones/RAMONES - I Wanna Be Your Boyfriend-iS8oYNK73Ek.aac
+23:Ramones/RAMONES - Judy Is A Punk-K6GAGdBiJF0.aac
+24:Ramones/RAMONES - Outsider-5Qzd-Ko3Nqo.aac
+25:Ramones/RAMONES - Pet Sematary-G6m0Rc1KW0I.aac
+26:Ramones/RAMONES - Pinhead-GT_2K4ddG7g.aac
+27:Ramones/RAMONES - Rockaway Beach-6siGKxcKol0.aac
+28:Ramones/RAMONES - Teenage Lobotomy-6ssoBUb2cJk.aac
+29:Ramones/RAMONES - The KKK Took My Baby Away-hT1OKo1rT84.aac
+30:Ramones/RAMONES - Wart Hog-ofoX2YsSJi0.aac
+31:Ramones/RAMONES - We're A Happy Family-ZQlM59sDJVo.aac
+32:Ramones/The Ramones - Rock 'N' Roll High School (Single)-lQFEo5pj-V8.aac
+33:Ramones/The Ramones-Commando-9xmRt_2Aia0.aac
 playlist_end
