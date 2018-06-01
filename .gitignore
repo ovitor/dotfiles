@@ -15,5 +15,12 @@
 vim/.netrwhist
 vim/bundle/*
 
+# mpd thins
+config/mpd/state
+config/mpd/pid
+
+# local things
+local
+
 # Tokens
 tokens
