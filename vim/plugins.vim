@@ -19,3 +19,6 @@ let g:vimtex_compiler_latexmk = {'callback' : 0}
 "Markdown preview configuration"
 let vim_markdown_preview_github=0
 let vim_markdown_preview_browser='Firefox'
+
+"Terraform plugin
+let g:terraform_align=1

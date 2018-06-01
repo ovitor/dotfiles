@@ -19,6 +19,7 @@ Plugin 'junegunn/fzf'
 Plugin 'posva/vim-vue'
 Plugin 'valloric/youcompleteme'
 Plugin 'honza/vim-snippets'
+Plugin 'hashivim/vim-terraform'
 Plugin 'ryanoasis/vim-devicons'
 
 call vundle#end()
