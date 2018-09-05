@@ -12,7 +12,7 @@ HYPHEN_INSENSITIVE="true"
 ENABLE_CORRECTION="true"
 
 # Loading plugins
-plugins=(git git-flow httpie)
+plugins=(git git-flow httpie kubectl)
 
 # User configuration
 source $ZSH/oh-my-zsh.sh > /dev/null 2>&1
@@ -24,3 +24,4 @@ source ~/.dotfiles/alias/alias.sh > /dev/null 2>&1
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
 
+export PATH="$PATH:/home/vitor/.php-school/bin"
