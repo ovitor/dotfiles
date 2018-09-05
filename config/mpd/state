@@ -1,6 +1,8 @@
 sw_volume: 100
 audio_device_state:1:default detected output
-state: stop
+state: pause
+current: 13
+time: 143.359000
 random: 0
 repeat: 0
 single: 0
@@ -9,38 +11,22 @@ crossfade: 0
 mixrampdb: 0.000000
 mixrampdelay: -1.000000
 playlist_begin
-0:Pink Floyd/♫ Pink Floyd - On The Turning Away [Lyrics]-ojf18wT_Xtk.aac
-1:Pink Floyd/Pink Floyd - Another Brick In The Wall (HQ)-YR5ApYxkU-U.aac
-2:Pink Floyd/Pink Floyd -   'Run Like Hell'  - 1990-KcahIWbKzhc.aac
-3:Pink Floyd/Pink Floyd - Comfortably Numb [HD]-J8fFVOoqepc.aac
-4:Pink Floyd/Pink Floyd - High Hopes (Official Music Video)-7jMlFXouPk8.aac
-5:Pink Floyd/Pink Floyd - Coming Back To Life-yjoPWxmOCtc.aac
-6:Pink Floyd/Pink Floyd - Learning To Fly (Official Music Video)-nVhNCTH8pDs.aac
-7:Pink Floyd/Pink Floyd - Lost For Words - lyrics-zPwucFar9kM.aac
-8:Pink Floyd/Pink Floyd - Money (Official Music Video)--0kcet4aPpQ.aac
-9:Pink Floyd/Pink Floyd - Shine On You Crazy Diamond   [Official]-R0sw2CgysWY.aac
-10:Pink Floyd/Pink Floyd - Sorrow-AdKNlGfkyhc.aac
-11:Pink Floyd/Pink Floyd - Time (Lyrics included)-rL3AgkwbYgo.aac
-12:Pink Floyd/Pink Floyd - Wish You Were Here-217JOBWTolg.aac
-13:Pink Floyd/Pink Floyd-Hey You {Music Video}-DEDjF2tLbhk.aac
-14:Ramones/baby i love you -the ramones-VQdOyN9_5k8.aac
-15:Ramones/RAMONES - Beat on the Brat-3HUGeA2lur4.aac
-16:Ramones/Ramones - 'Sheena is a Punk Rocker' (Subtitulada en Español)-7vNrZcs44QU.aac
-17:Ramones/RAMONES - Blitzkrieg Bop-c1BOsShTyng.aac
-18:Ramones/RAMONES - Cretin Hop-7ymeuOz0hZU.aac
-19:Ramones/RAMONES - Do You Remember Rock 'N Roll Radio-loFLdYM79gY.aac
-20:Ramones/RAMONES - I Just Want To Have Something To Do-sPYGCxco56I.aac
-21:Ramones/RAMONES - I Wanna Be Sedated-JBN1CkyRzmE.aac
-22:Ramones/RAMONES - I Wanna Be Your Boyfriend-iS8oYNK73Ek.aac
-23:Ramones/RAMONES - Judy Is A Punk-K6GAGdBiJF0.aac
-24:Ramones/RAMONES - Outsider-5Qzd-Ko3Nqo.aac
-25:Ramones/RAMONES - Pet Sematary-G6m0Rc1KW0I.aac
-26:Ramones/RAMONES - Pinhead-GT_2K4ddG7g.aac
-27:Ramones/RAMONES - Rockaway Beach-6siGKxcKol0.aac
-28:Ramones/RAMONES - Teenage Lobotomy-6ssoBUb2cJk.aac
-29:Ramones/RAMONES - The KKK Took My Baby Away-hT1OKo1rT84.aac
-30:Ramones/RAMONES - Wart Hog-ofoX2YsSJi0.aac
-31:Ramones/RAMONES - We're A Happy Family-ZQlM59sDJVo.aac
-32:Ramones/The Ramones - Rock 'N' Roll High School (Single)-lQFEo5pj-V8.aac
-33:Ramones/The Ramones-Commando-9xmRt_2Aia0.aac
+0:Tribo de Jah/Tribo de Jah - 2000 anos-CG9gYLOxNMM.aac
+1:Tribo de Jah/Tribo de Jah - Babylon System-bD-5iAMKd74.aac
+2:Tribo de Jah/Tribo de Jah - Babilônia em Chamas-_rY8XdvL4FY.aac
+3:Tribo de Jah/Tribo de Jah - Breve Sopro No Ar - Tribo de Jah-DDxPdx1wN1A.aac
+4:Tribo de Jah/Tribo de Jah - Confissões de Um Velho Regueiro-YMic1m0STHU.aac
+5:Tribo de Jah/Tribo de Jah - Farsa da Democracia-_GUxXQc_yNo.aac
+6:Tribo de Jah/Tribo de Jah - Garota Dreadlock-G1n7O1oZz8M.aac
+7:Tribo de Jah/Tribo de Jah - Morena Raiz--5tzLKnSt0Y.aac
+8:Tribo de Jah/Tribo de Jah - Na Onda do Amor-8bYWY63R6kA.aac
+9:Tribo de Jah/Tribo de Jah - Oh Jah-QdJzrhYB7K4.aac
+10:Tribo de Jah/Tribo de Jah - Regueiros Guerreiros-7OtILFlGMug.aac
+11:Tribo de Jah/Tribo de Jah - Um Só Amor-Uw23m3NI4fE.aac
+12:Tribo de Jah/Tribo de Jah _ Guerrilhas Mentais _ Oficial-VfTAAfeaYo8.aac
+13:Cypress Hill/Cypress Hill - Dr. Greenthumb (Official Music Video)-lj9FVlEtknU.aac
+14:Cypress Hill/Cypress Hill - Insane In The Brain (Official Video)-RijB8wnJCN0.aac
+15:Cypress Hill/Cypress Hill - How I Could Just Kill a Man (Music Video)-Yg-RIOATCbU.aac
+16:Cypress Hill/Cypress Hill - Lowrider-mMWBh0B9F0M.aac
+17:Cypress Hill/Cypress Hill - What's Your Number ft. Tim Armstrong-NFE7gTvalHw.aac
 playlist_end
