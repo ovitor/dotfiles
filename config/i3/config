@@ -231,9 +231,10 @@ bindsym $mod+Tab workspace next
 bindsym $mod+Shift+Tab workspace prev
 
 # screenshot key
-bindsym --release Print exec --no-startup-id "maim -s -p 0 -c 0.96,0.5,0.09 $HOME/pictures/screenshot-$(date +%Y-%m-%d_%H-%M-%S).png"
+# bindsym --release Print exec --no-startup-id "maim -s -p 0 -c 0.96,0.5,0.09 $HOME/pictures/screenshot-$(date +%Y-%m-%d_%H-%M-%S).png"
+bindsym --release Print exec --no-startup-id "flameshot gui"
 bindsym --release Shift+Print exec --no-startup-id "maim -p 0 -c 0.96,0.5,0.09 $HOME/pictures/screenshot-$(date +%Y-%m-%d_%H-%M-%S).png"
-bindsym --release Control+Print exec --no-startup-id "maim -s -p 0 -c 0.96,0.5,0.09 | convert - \( +clone -background black -shadow 40x5+0+0 \) +swap -background none -layers merge +repage $HOME/pictures/screenshot-$(date +%Y-%m-%d_%H-%M-%S).png"
+bindsym --release Control+Print exec --no-startup-id "maim -s -d 5 -p 0 -c 0.96,0.5,0.09 | convert - \( +clone -background black -shadow 40x5+0+0 \) +swap -background none -layers merge +repage $HOME/pictures/screenshot-$(date +%Y-%m-%d_%H-%M-%S).png"
 
 # multimedia keys
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5% #increase sound volume
@@ -258,6 +259,7 @@ exec --no-startup-id setxkbmap -layout br
 
 # executing applications
 exec_always feh --bg-fill ~/.wallpaper.jpg 
+exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 
 exec firefox
 exec_always compton --config ~/.config/compton.conf 
