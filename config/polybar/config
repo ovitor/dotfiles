@@ -71,7 +71,7 @@
 
 	modules-left   = previous playpause next volume music 
 	modules-center = workspaces
-	modules-right  = updates-arch-combined network time 
+	modules-right  = updates-arch-combined batteries network time 
 
 	fixed-center = true
 
@@ -84,10 +84,15 @@
   exec = ~/.config/polybar/scripts/updates-arch-combined.sh
   interval = 20
 
+[module/batteries]
+  type = custom/script
+  exec = ~/.config/polybar/scripts/batteries.sh
+  interval = 5
+
 [module/network]
 	type          = internal/network
-	interface     = eno1 
-	ping-interval = 3
+	interface     = enp0s25
+	ping-interval = 5
 
   label-connected = " %local_ip% (%downspeed%) "
 
