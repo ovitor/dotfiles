@@ -14,35 +14,39 @@ pacman -Suy
 
 # Install X and other tools
 pacman -S --noconfirm \
+  base-devel \
   xorg-server \
   xorg-apps \
   xf86-video-intel \
+  xf86-input-synaptics \
   wpa_supplicant \
   sudo ntp \
-  nvidia bumblebee # dell xps15z requirement
+  ttf-roboto ttf-ubuntu-font-family \
+  ttf-fira-mono ttf-fira-code ttf-fira-code-mono \
+  ttf-fira-sans awesome-terminal-fonts
 
 # Install WM and other tools
 pacman -S --noconfirm \
-  i3 i3blocks zsh \
-  rxvt-unicode urxvt-perls \
+  i3-gaps sddm zsh \
+  termite \
+  upower \
+  acpi \
   exfat-utils xdg-user-dirs \
-  rofi feh dunst compton \ 
-  ttf-fira-sans awesome-terminal-fonts \
+  rofi feh dunst compton
 
 # Audio and Video
 pacman -S  --noconfirm \
-  alsa-utils \
+  acpid alsa-utils \
   pulseaudio-alsa \
-  mpv mpc mpd ncmpcpp 
+  mpv mpc mpd ncmpcpp
 
 # Miscellaneous 
 pacman -S --noconfirm \
-  htop aria2 httpie nmap 
-  gnu-netcat tcpdump \
+  htop aria2 httpie nmap \
   youtube-dl p7zip unrar tree \
   speedtest-cli keybase \
   aspell aspell-pt aspell-en \
-  pavucontrol maim picocom \
+  pavucontrol maim flameshot \
   nmap ranger unzip \
 
 # Other applications
@@ -50,14 +54,16 @@ pacman -S --noconfirm \
   firefox \
   wireshark-qt \
   transmission-cli \
-  zathura zathura-pdf-mupdf
+  zathura zathura-pdf-mupdf \
+  cups cups-pdf
 
 # Dev and Sysadmin applications
 pacman -S --noconfirm \
-  git git-flow git-lfs \
+  git git-lfs \
+  python-virtualenv \
   terraform ansible pwgen \
   docker docker-compose \
-  openssh screen grep  \
+  openssh screen grep freerdp \
   vim fzf python-markdown
 
 exit 0
