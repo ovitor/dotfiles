@@ -1,6 +1,6 @@
 #!/bin/sh
 
-updates_arch=$(checkupdates-aur | wc -l)
+updates_arch=$(checkupdates | wc -l)
 
 # if ! updates_aur=$(cower -u 2> /dev/null | wc -l); then
 if ! updates_aur=$(trizen -Su --aur --quiet | wc -l); then
