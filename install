@@ -2,36 +2,60 @@
 
 BASEDIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 USER=vitor
+USER_BASEDIR=/home/$USER/.dotfiles
 
 # pacman 
 bash ${BASEDIR}/pacman/install.sh
+echo "pacman step executed"
+
+# add default user 
+# you need to set password later
+useradd -m -G lp,docker,wheel -s /bin/zsh $USER
+echo "add user step executed"
+
+# copying dotfiles and defining BASEDIR
+cp -r $(pwd) $USER_BASEDIR
 
 # gitfiles
-ln -sf ${BASEDIR}/gitfiles/gitconfig /home/$USER/.gitconfig
+ln -sf ${USER_BASEDIR}/gitfiles/gitconfig /home/$USER/.gitconfig
+echo "git configuration step executed"
 
 # ntp.br
-sudo bash ${BASEDIR}/ntp/install.sh
+bash ${USER_BASEDIR}/ntp/install.sh
+echo "ntp configuration step executed"
 
 # vimfiles
-ln -sf ${BASEDIR}/vim /home/$USER/.vim
-vim -c 'PluginInstall' -c 'qa!'
-
-# zsh
-bash ${BASEDIR}/zshrc/install.sh
-rm ~/.zshrc
-ln -sf ${BASEDIR}/zshrc/zshrc /home/$USER/.zshrc
+ln -sf ${USER_BASEDIR}/vim /home/$USER/.vim
+vim +PluginInstall +qall
+echo "vim configuration step executed"
 
 # config directory
-ln -sf ${BASEDIR}/.config /home/$USER/.config
+ln -sf ${USER_BASEDIR}/config /home/$USER/.config
+echo "configuration step executed"
 
 # local user share applications
-ln -sf ${BASEDIR}/.local/share/applications /home/$USER/.local/share/applications
+mkdir -p /home/$USER/.local/share/
+ln -sf ${USER_BASEDIR}/local/share/applications /home/$USER/.local/share/applications
+echo "local user share applications configuration step executed"
 
 # archlinux 
-bash ${BASEDIR}/archlinux/post-installation.sh $USER
+bash ${USER_BASEDIR}/archlinux/post-installation.sh $USER
+ln -sf ${USER_BASEDIR}/archlinux/configuration-files/70-synaptics.conf /etc/X11/xorg.conf.d/
+ln -sf ${USER_BASEDIR}/archlinux/configuration-files/thinkpad-x250.conf /etc/modprobe.d/
+echo "post installation configuration step executed"
 
 # pacaur using other user
-su -u $USER -c 'bash ${BASEDIR}/pacaur/install.sh'
+#su -u $USER -c 'bash ${BASEDIR}/pacaur/install.sh'
 
 # xresources
-ln -sf ${BASEDIR}/Xresources /home/$USER/.Xresources
+ln -sf ${USER_BASEDIR}/Xresources /home/$USER/.Xresources
+echo "xresources configuration step executed"
+
+# zsh - hardcoded user basedir !!! atention !!!
+su - $USER -c 'bash /home/vitor/.dotfiles/zshrc/install.sh'
+ln -sf ${USER_BASEDIR}/zshrc/zshrc /home/$USER/.zshrc
+echo "zsh configuration step executed"
+
+# render unto Caeser the things that are Caesar's
+chown -R $USER:$USER /home/$USER
+echo "owenership configuration step executed"
