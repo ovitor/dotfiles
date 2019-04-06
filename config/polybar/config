@@ -68,8 +68,8 @@
 	font-N = <fontconfig pattern>;<vertical offset>
 	font-0 = FontAwesome:size=5;2
 	font-1 = octicons:pixelsize=5;1
-	font-2 = ProFontIIx:pixelsize=4;1
-	font-3 = ProFontIIx:size=4;1
+	font-2 = Fira Mono:pixelsize=4;1
+	font-3 = Fira Mono:size=4;1
 
 	modules-left   = previous playpause next volume music 
 	modules-center = workspaces
