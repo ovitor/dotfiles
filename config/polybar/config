@@ -68,14 +68,13 @@
 	font-N = <fontconfig pattern>;<vertical offset>
 	font-0 = FontAwesome:size=5;2
 	font-1 = octicons:pixelsize=5;1
-	font-2 = Fira Mono:pixelsize=4;1
+	font-2 = Fira Mono:pixelsize=5;1
 	font-3 = Fira Mono:size=4;1
 
-	modules-left   = previous playpause next volume music 
+	modules-left   = 
 	modules-center = workspaces
-	modules-right  = batteries network time 
+	modules-right  = batteries network time volume 
 
-  tray-position  = right
 	fixed-center = true
 
 ;--------------------------------------------
@@ -97,7 +96,7 @@
 	interface     = enp0s25
 	ping-interval = 5
 
-  label-connected = " %local_ip% (%downspeed%) "
+  label-connected = "  %local_ip% (%downspeed%) "
 
 [module/xwindow]
 	y-offset      = 10
