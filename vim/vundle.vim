@@ -2,7 +2,6 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
 Plugin 'gmarik/Vundle.vim'
-"Plugin 'ayu-theme/ayu-vim'
 Plugin 'scrooloose/nerdtree'
 Plugin 'itchyny/lightline.vim'
 Plugin 'airblade/vim-gitgutter'
@@ -11,7 +10,6 @@ Plugin 'lervag/vimtex'
 Plugin 'shougo/neocomplete.vim'
 Plugin 'amiorin/vim-project'
 Plugin 'JamshedVesuna/vim-markdown-preview'
-Plugin 'aklt/plantuml-syntax'
 Plugin 'editorconfig/editorconfig-vim'
 Plugin 'dracula/vim'
 Plugin 'jistr/vim-nerdtree-tabs'
