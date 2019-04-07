@@ -28,6 +28,7 @@ pacman -S --noconfirm \
 # Install WM and other tools
 pacman -S --noconfirm \
   i3-gaps sddm zsh \
+  wmctrl \ # i3fancy-lock dependency
   termite \
   upower \
   acpi \
