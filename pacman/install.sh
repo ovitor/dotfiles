@@ -30,6 +30,7 @@ pacman -S --noconfirm \
   i3-gaps sddm zsh \
   wmctrl \ # i3fancy-lock dependency
   termite \
+  tmux \
   upower \
   acpi \
   exfat-utils xdg-user-dirs \

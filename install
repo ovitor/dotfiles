@@ -51,6 +51,10 @@ echo "post installation configuration step executed"
 ln -sf ${USER_BASEDIR}/Xresources /home/$USER/.Xresources
 echo "xresources configuration step executed"
 
+# tmux 
+ln -sf ${USER_BASEDIR}/tmux.conf /home/$USER/.tmux.conf
+echo "tmux configuration step executed"
+
 # zsh - hardcoded user basedir !!! atention !!!
 su - $USER -c 'bash /home/vitor/.dotfiles/zshrc/install.sh'
 ln -sf ${USER_BASEDIR}/zshrc/zshrc /home/$USER/.zshrc
