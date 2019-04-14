@@ -135,18 +135,12 @@ bindsym $mod+Shift+0 move container to workspace $workspace0
 
 # open applications in their workspaces
 assign [class="Firefox"] $workspace1
-#assign [class="whatsapp-desktop"] $workspace3
-#assign [class="TelegramDesktop"] $workspace4
-#assign [class="Slack"] $workspace5
-#assign [class="Zathura"] $workspace6
-#assign [class="Rhythmbox"] $workspace0
 
 # windows in floating mode
 for_window [class="mpv"] floating enable
 for_window [class="feh"] floating enable 
 for_window [class="feh"] resize set 1750 890 
 for_window [class="feh"] move absolute position center
-#for_window [class="Wine"] floating enable
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
@@ -199,22 +193,6 @@ client.unfocused        $inactive-bg-color  $inactive-bg-color $inactive-text-co
 client.focused_inactive $inactive-bg-color  $inactive-bg-color $inactive-text-color $bg-color 
 client.urgent 		$urgent-bg-color    $urgent-bg-color   $text-color    	    $bg-color  
 
-# Start i3bar to display a workspace bar (plus the system information i3status
-# finds out, if available)
-#bar {
-#  status_command i3blocks -c ~/.config/i3/i3blocks.conf
-#	tray_output none
-#	binding_mode_indicator no
-#	font pango:Fira, FontAwesome 11
-#	colors {
-#		background $bg-color
-#	    	separator #757575
-#		#                  border             background         text
-#		focused_workspace  $bg-color          $bg-color          $text-color
-#		inactive_workspace $inactive-bg-color $inactive-bg-color $inactive-text-color
-#		urgent_workspace   $urgent-bg-color   $urgent-bg-color   $text-color
-#	}
-#}
 
 # other configs
 bindsym $mod+d exec notify-send "Hora agora.." "`date`"
@@ -223,7 +201,6 @@ bindsym $mod+d exec notify-send "Hora agora.." "`date`"
 bindsym $mod+Shiftx exec i3lock-fancy -f Office Code Pro 
 
 # launcher
-#bindsym $mod+space exec --no-startup-id rofi -show run -width 400 -lines 3 -font "Ubuntu 11" -separator-style "none" 
 bindsym $mod+space exec --no-startup-id rofi -show drun 
 
 # default mod+tab 
@@ -256,6 +233,9 @@ bindsym XF86AudioPrev exec playerctl previous
 
 # setting keyboard layout
 exec --no-startup-id setxkbmap -layout br
+
+# setting up gestures
+exec --no-startup-id libinput-gestures-setup start
 
 # executing applications
 exec_always feh --bg-fill $HOME/.dotfiles/wallpaper/w1.jpg  

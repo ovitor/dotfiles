@@ -27,6 +27,7 @@ trizen -Suy
 # Installing tools
 trizen -S --noconfirm \
   polybar \
+  libinput-gestures \
   nerd-fonts-complete \
   ttf-profont-iix
   samsung-printers \
