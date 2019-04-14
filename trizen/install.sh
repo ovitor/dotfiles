@@ -26,8 +26,14 @@ trizen -Suy
 
 # Installing tools
 trizen -S --noconfirm \
+  polybar \
+  nerd-fonts-complete \
+  ttf-profont-iix
+  samsung-printers \
   xflux \
   i3lock-fancy-git \
   keeweb-desktop \
   bashmount \
+  ycmd-git \ #for vim
+  vue-cli \
   

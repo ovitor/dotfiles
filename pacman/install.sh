@@ -49,6 +49,7 @@ pacman -S --noconfirm \
   aspell aspell-pt aspell-en \
   pavucontrol maim flameshot \
   nmap ranger unzip \
+  gnupg \
 
 # Other applications
 pacman -S --noconfirm \
