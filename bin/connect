@@ -1,0 +1,6 @@
+#!/bin/zsh
+
+sudo netctl stop-all
+sudo netctl start $1
+echo 'connected to' $1
+
