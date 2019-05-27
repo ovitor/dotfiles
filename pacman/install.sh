@@ -32,6 +32,7 @@ pacman -S --noconfirm \
   termite \
   tmux \
   upower \
+  udiskie udisks2 \
   acpi \
   exfat-utils xdg-user-dirs \
   rofi feh dunst compton
@@ -50,7 +51,7 @@ pacman -S --noconfirm \
   aspell aspell-pt aspell-en \
   pavucontrol maim flameshot \
   nmap ranger unzip \
-  gnupg \
+  gnupg tldr \
 
 # Other applications
 pacman -S --noconfirm \
@@ -63,10 +64,10 @@ pacman -S --noconfirm \
 # Dev and Sysadmin applications
 pacman -S --noconfirm \
   git git-lfs \
-  python-virtualenv \
   terraform ansible pwgen \
   docker docker-compose \
   openssh screen grep freerdp \
-  vim fzf python-markdown
+  vim fzf \ 
+  python-markdown python-pipenv
 
 exit 0
