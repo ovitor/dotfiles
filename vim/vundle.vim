@@ -15,6 +15,7 @@ Plugin 'honza/vim-snippets'
 " interface  
 Plugin 'dracula/vim'
 Plugin 'scrooloose/nerdtree'
+Plugin 'jistr/vim-nerdtree-tabs'
 Plugin 'itchyny/lightline.vim'
 Plugin 'hashivim/vim-terraform'
 Plugin 'ryanoasis/vim-devicons'
