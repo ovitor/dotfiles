@@ -50,7 +50,7 @@ pacman -S --noconfirm \
   speedtest-cli keybase \
   aspell aspell-pt aspell-en \
   pavucontrol maim flameshot \
-  nmap ranger unzip \
+  nmap ranger nnn unzip \
   gnupg tldr \
 
 # Other applications
