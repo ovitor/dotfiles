@@ -10,8 +10,5 @@ alias pbcopy="xclip -selection c"
 # feh
 alias feh="feh -."
 
-# internet
-alias stop-home="sudo netctl stop home"
-alias stop-wirelesshome="sudo netctl stop wirelesshome"
-alias start-home="sudo netctl start home"
-alias start-wirelesshome="sudo netctl start wirelesshomedhcp"
+# code
+alias code-python="tmux new-session -s python \; send-keys 'vim .' C-m \; split-window -v -p 25 \; send-keys 'pipenv shell' C-m \; split-window -h -p 30 \; send-keys 'pipenv shell' C-m \; select-pane -t 0"
