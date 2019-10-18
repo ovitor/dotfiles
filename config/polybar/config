@@ -41,6 +41,7 @@
 	offset-x = 0
 	offset-y = 0
 
+  monitor = ${env:MONITOR:eDP-1}
   tray-position = right
 
 	bottom = true

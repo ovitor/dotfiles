@@ -6,7 +6,7 @@ font pango:Fira Mono 8
 
 # general variables
 set $browser  firefox
-set $term     termite 
+set $term     alacritty 
 
 # window edge
 for_window [class="^.*"] border pixel 0
@@ -238,10 +238,11 @@ exec --no-startup-id setxkbmap -layout br
 exec --no-startup-id libinput-gestures-setup start
 
 # executing applications
-exec_always feh --bg-fill $HOME/.dotfiles/wallpaper/w1.jpg  
+exec_always feh --bg-fill $HOME/.dotfiles/wallpaper/w2-4k.jpg  
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 exec_always --no-startup-id udiskie -at0 
+# exec_always compton --config ~/.config/compton.conf 
 
+exec --no-startup-id dockd --daemon
 exec firefox
-exec_always compton --config ~/.config/compton.conf 
 exec xflux -l -3.731862 -g -38.526669

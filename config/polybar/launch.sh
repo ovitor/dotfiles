@@ -1,6 +1,7 @@
 #!/usr/bin/env sh
 
 # Terminate already running bar instances
+export MONITOR=$(polybar -m|tail -1|sed -e 's/:.*$//g')
 killall -q polybar
 
 # Wait until the processes have been shut down
