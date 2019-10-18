@@ -16,6 +16,9 @@ map tn :tabnext <cr>
 "Mapping belkin keys
 ":imap qq <Esc> 
 
+"Quickfix searches
+map qf :copen<cr>
+
 "General Config"
 syntax on
 "colorscheme dracula
