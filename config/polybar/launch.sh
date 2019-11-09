@@ -11,7 +11,7 @@ while pgrep -u $UID -x polybar >/dev/null; do sleep 1; done
 #polybar base &
 
 if ! pgrep -x polybar; then
-	polybar base &
+	MONITOR=$MONITOR polybar base &
 else
 	pkill -USR1 polybar
 fi

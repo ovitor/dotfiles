@@ -41,11 +41,13 @@ echo "local user share applications configuration step executed"
 # archlinux 
 bash ${USER_BASEDIR}/archlinux/post-installation.sh $USER
 ln -sf ${USER_BASEDIR}/archlinux/configuration-files/70-synaptics.conf /etc/X11/xorg.conf.d/
+ln -sf ${USER_BASEDIR}/archlinux/configuration-files/10-trackpoint.conf /etc/X11/xorg.conf.d/
+ln -sf ${USER_BASEDIR}/archlinux/configuration-files/20-thinkpad.conf /etc/X11/xorg.conf.d/
 ln -sf ${USER_BASEDIR}/archlinux/configuration-files/thinkpad-x250.conf /etc/modprobe.d/
 echo "post installation configuration step executed"
 
-# pacaur using other user
-#su -u $USER -c 'bash ${BASEDIR}/pacaur/install.sh'
+# trizen using other user
+#su -u $USER -c 'bash ${BASEDIR}/trizen/install.sh'
 
 # xresources
 ln -sf ${USER_BASEDIR}/Xresources /home/$USER/.Xresources

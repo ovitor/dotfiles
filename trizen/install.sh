@@ -29,12 +29,12 @@ trizen -S --noconfirm \
   polybar \
   libinput-gestures \
   nerd-fonts-complete \
-  ttf-profont-iix
+  lazydocker \
+  bitwarden-bin \
   samsung-printers \
+  tor-browser \
   xflux \
   i3lock-fancy-git \
-  keeweb-desktop \
-  bashmount \
   ycmd-git \ #for vim
   vue-cli \
   

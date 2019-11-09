@@ -12,12 +12,12 @@ echo "pacman installs"
 # Make sure we have updated repositories.
 pacman -Suy
 
-# Install X and other tools
+# Install X/ and other tools
 pacman -S --noconfirm \
   base-devel \
   xorg-server \
-  xorg-apps \
-  xf86-video-intel \
+  xorg-apps xclip \
+  mesa \
   xf86-input-synaptics \
   wpa_supplicant \
   sudo ntp \
@@ -29,13 +29,14 @@ pacman -S --noconfirm \
 pacman -S --noconfirm \
   i3-gaps sddm zsh \
   wmctrl \ # i3fancy-lock dependency
-  termite \
+  alacritty \
   tmux \
   upower \
   udiskie udisks2 \
   acpi \
   exfat-utils xdg-user-dirs \
-  rofi feh dunst compton
+  rofi feh dunst \
+  openvpn
 
 # Audio and Video
 pacman -S  --noconfirm \
@@ -68,6 +69,9 @@ pacman -S --noconfirm \
   docker docker-compose \
   openssh screen grep freerdp \
   vim fzf \ 
-  python-markdown python-pipenv
+  python-markdown poetry \
+  net-tools \
+  kubectl \
+  rclone
 
 exit 0
