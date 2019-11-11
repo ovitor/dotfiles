@@ -11,7 +11,7 @@ then
     --output $INTERNAL_MONITOR --off \
     --output $EXTERNAL_MONITOR --primary --mode $EXTERNAL_MONITOR_MODE  --pos 1920x0 --rotate normal
   sh ~/.config/polybar/launch.sh
-  feh ~/.dotfiles/wallpaper/wallpaper.jpg
+  feh --bg-fill ~/.dotfiles/wallpaper/wallpaper.jpg
   setxkbmap us
   notify-send --app-name "Thinkpad Dock" "Full dock mode activated." 
 elif [ $1 -eq 2 ]
@@ -20,6 +20,6 @@ then
     --output $INTERNAL_MONITOR --primary --mode $INTERNAL_MONITOR_MODE --pos 0x0 --rotate normal \
     --output $EXTERNAL_MONITOR --off 
   sh ~/.config/polybar/launch.sh
-  feh ~/.dotfiles/wallpaper/wallpaper.jpg
+  feh --bg-fill ~/.dotfiles/wallpaper/wallpaper.jpg
   notify-send --app-name "Thinkpad Dock" "Notebook mode activated." 
 fi
