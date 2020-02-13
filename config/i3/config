@@ -86,21 +86,6 @@ bindsym $mod+a focus parent
 
 # workspace variables
 
-# web
-#set $workspace1 "1 &#xf269;" 
-# terminal
-#set $workspace2 "2 &#xf120;" 
-# whatsapp 
-#set $workspace3 "3 &#xf232;" 
-# telegram 
-#set $workspace4 "4 &#xf2c6;" 
-# slack
-#set $workspace5 "5 &#xf198;" 
-# zathura 
-#set $workspace6 "6 &#xf0f6;" 
-# song
-#set $workspace0 "10 &#xf01d;" 
-
 set $workspace1 "1 " 
 set $workspace2 "2 " 
 set $workspace3 "3 " 
@@ -180,25 +165,24 @@ mode "resize" {
 bindsym $mod+r mode "resize"
 
 # defining colors
-set $bg-color 	         #2F343F
-set $inactive-bg-color   #2F343F
-set $text-color          #F3F4F5
-set $inactive-text-color #676E7D
-set $urgent-bg-color     #E53935
+#set $bg-color 	         #2F343F
+#set $inactive-bg-color   #2F343F
+#set $text-color          #F3F4F5
+#set $inactive-text-color #676E7D
+#set $urgent-bg-color     #E53935
 
 # window colors
 #                       border              background         text                 indicator
-client.focused          $bg-color           $bg-color          $text-color          $bg-color 
-client.unfocused        $inactive-bg-color  $inactive-bg-color $inactive-text-color $bg-color 
-client.focused_inactive $inactive-bg-color  $inactive-bg-color $inactive-text-color $bg-color 
-client.urgent 		$urgent-bg-color    $urgent-bg-color   $text-color    	    $bg-color  
-
+#client.focused          $bg-color           $bg-color          $text-color          $bg-color 
+#client.unfocused        $inactive-bg-color  $inactive-bg-color $inactive-text-color $bg-color 
+#client.focused_inactive $inactive-bg-color  $inactive-bg-color $inactive-text-color $bg-color 
+#client.urgent 		$urgent-bg-color    $urgent-bg-color   $text-color    	    $bg-color  
 
 # other configs
 bindsym $mod+d exec notify-send "Hora agora.." "`date`"
 
 # lock computer 
-bindsym $mod+Shiftx exec i3lock-fancy -f Office Code Pro 
+bindsym $mod+Shiftx exec betterlockscreen -l dim 
 
 # launcher
 bindsym $mod+space exec --no-startup-id rofi -show drun 
@@ -208,7 +192,6 @@ bindsym $mod+Tab workspace next
 bindsym $mod+Shift+Tab workspace prev
 
 # screenshot key
-# bindsym --release Print exec --no-startup-id "maim -s -p 0 -c 0.96,0.5,0.09 $HOME/pictures/screenshot-$(date +%Y-%m-%d_%H-%M-%S).png"
 bindsym --release Print exec --no-startup-id "flameshot gui"
 bindsym --release Shift+Print exec --no-startup-id "maim -p 0 -c 0.96,0.5,0.09 $HOME/pictures/screenshot-$(date +%Y-%m-%d_%H-%M-%S).png"
 bindsym --release Control+Print exec --no-startup-id "maim -s -d 5 -p 0 -c 0.96,0.5,0.09 | convert - \( +clone -background black -shadow 40x5+0+0 \) +swap -background none -layers merge +repage $HOME/pictures/screenshot-$(date +%Y-%m-%d_%H-%M-%S).png"
@@ -221,9 +204,6 @@ bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle # mute s
 # Sreen brightness controls
 bindsym XF86MonBrightnessUp exec xbacklight -inc 20 # increase screen brightness
 bindsym XF86MonBrightnessDown exec xbacklight -dec 20 # decrease screen brightness
-
-# Touchpad controls
-bindsym XF86TouchpadToggle exec /some/path/toggletouchpad.sh # toggle touchpad
 
 # Media player controls
 bindsym XF86AudioPlay exec playerctl play
@@ -240,7 +220,9 @@ exec --no-startup-id libinput-gestures-setup start
 # executing applications
 exec_always feh --bg-fill $HOME/.dotfiles/wallpaper/wallpaper.jpg  
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
-exec_always --no-startup-id udiskie -at0 
+exec_always --no-startup-id udiskie -at
+
+# exec_always picom -b
 # exec_always compton --config ~/.config/compton.conf 
 
 exec --no-startup-id dockd --daemon

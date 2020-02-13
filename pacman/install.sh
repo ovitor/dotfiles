@@ -16,10 +16,10 @@ pacman -Suy
 pacman -S --noconfirm \
   base-devel \
   xorg-server \
-  xorg-apps xclip \
+  xorg-apps \
   mesa \
   xf86-input-synaptics \
-  wpa_supplicant \
+  wpa_supplicant netctl \
   sudo ntp \
   ttf-roboto ttf-ubuntu-font-family \
   ttf-fira-mono ttf-fira-code ttf-fira-code-mono \
@@ -27,8 +27,7 @@ pacman -S --noconfirm \
 
 # Install WM and other tools
 pacman -S --noconfirm \
-  i3-gaps sddm zsh \
-  wmctrl \ # i3fancy-lock dependency
+  i3-gaps zsh \
   alacritty \
   tmux \
   upower \

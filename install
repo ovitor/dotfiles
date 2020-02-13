@@ -5,16 +5,16 @@ USER=vitor
 USER_BASEDIR=/home/$USER/.dotfiles
 
 # pacman 
-bash ${BASEDIR}/pacman/install.sh
-echo "pacman step executed"
+#bash ${BASEDIR}/pacman/install.sh
+#echo "pacman step executed"
 
 # add default user 
 # you need to set password later
-useradd -m -G lp,docker,wheel -s /bin/zsh $USER
-echo "add user step executed"
+#useradd -m -G lp,docker,wheel -s /bin/zsh $USER
+#echo "add user step executed"
 
 # copying dotfiles and defining BASEDIR
-cp -r $(pwd) $USER_BASEDIR
+#cp -r $(pwd) $USER_BASEDIR
 
 # gitfiles
 ln -sf ${USER_BASEDIR}/gitfiles/gitconfig /home/$USER/.gitconfig
@@ -40,10 +40,10 @@ echo "local user share applications configuration step executed"
 
 # archlinux 
 bash ${USER_BASEDIR}/archlinux/post-installation.sh $USER
-ln -sf ${USER_BASEDIR}/archlinux/configuration-files/70-synaptics.conf /etc/X11/xorg.conf.d/
-ln -sf ${USER_BASEDIR}/archlinux/configuration-files/10-trackpoint.conf /etc/X11/xorg.conf.d/
-ln -sf ${USER_BASEDIR}/archlinux/configuration-files/20-thinkpad.conf /etc/X11/xorg.conf.d/
-ln -sf ${USER_BASEDIR}/archlinux/configuration-files/thinkpad-x250.conf /etc/modprobe.d/
+#ln -sf ${USER_BASEDIR}/archlinux/configuration-files/70-synaptics.conf /etc/X11/xorg.conf.d/
+#ln -sf ${USER_BASEDIR}/archlinux/configuration-files/10-trackpoint.conf /etc/X11/xorg.conf.d/
+#ln -sf ${USER_BASEDIR}/archlinux/configuration-files/20-thinkpad.conf /etc/X11/xorg.conf.d/
+#ln -sf ${USER_BASEDIR}/archlinux/configuration-files/thinkpad-x250.conf /etc/modprobe.d/
 echo "post installation configuration step executed"
 
 # trizen using other user
@@ -63,5 +63,5 @@ ln -sf ${USER_BASEDIR}/zshrc/zshrc /home/$USER/.zshrc
 echo "zsh configuration step executed"
 
 # render unto Caeser the things that are Caesar's
-chown -R $USER:$USER /home/$USER
-echo "owenership configuration step executed"
+#chown -R $USER:$USER /home/$USER
+#echo "owenership configuration step executed"

@@ -21,5 +21,6 @@ then
     --output $EXTERNAL_MONITOR --off 
   sh ~/.config/polybar/launch.sh
   feh --bg-fill ~/.dotfiles/wallpaper/wallpaper.jpg
+  setxkbmap -model abnt2 -layout br
   notify-send --app-name "Thinkpad Dock" "Notebook mode activated." 
 fi

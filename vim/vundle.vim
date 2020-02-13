@@ -10,7 +10,7 @@ Plugin 'airblade/vim-gitgutter'
 Plugin 'posva/vim-vue'
 Plugin 'lervag/vimtex'
 " completion
-Plugin 'neoclide/coc.nvim'
+"Plugin 'neoclide/coc.nvim'
 Plugin 'honza/vim-snippets'
 " interface  
 Plugin 'dracula/vim'
