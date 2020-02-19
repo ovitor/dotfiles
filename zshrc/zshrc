@@ -1,5 +1,5 @@
 # Path to your oh-my-zsh installation.
-export ZSH=/home/vitor/.oh-my-zsh
+export ZSH=/home/$USER/.oh-my-zsh
 
 # Set name of the theme to load.
 ZSH_THEME="daveverwer"
@@ -24,4 +24,3 @@ source ~/.dotfiles/alias/alias.sh > /dev/null 2>&1
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
 
-export PATH="$PATH:/home/vitor/.php-school/bin"

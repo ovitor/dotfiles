@@ -9,6 +9,9 @@
 "NERDTreeTabs configuration"
 "map ff :NERDTreeTabsToggle<CR>
 "let NERDTreeShowHidden=1
+"
+"PHPcomplete-extended
+autocmd  FileType  php setlocal omnifunc=phpcomplete_extended#CompletePHP
 
 "Makeshift configuration"
 let g:makeshift_chdir = 1

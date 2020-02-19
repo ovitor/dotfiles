@@ -21,7 +21,10 @@ Plugin 'junegunn/fzf'
 Plugin 'amiorin/vim-project'
 
 " PHP stuff
-Plugin 'shawncplus/phpcomplete.vim'
+Plugin 'shougo/vimproc.vim'
+Plugin 'shougo/unite.vim'
+Plugin 'm2mdas/phpcomplete-extended'
+Bundle 'm2mdas/phpcomplete-extended-laravel'
 
 call vundle#end()
 filetype plugin indent on
