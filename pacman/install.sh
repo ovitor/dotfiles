@@ -16,7 +16,7 @@ pacman -Suy
 pacman -S --noconfirm \
   base-devel \
   xorg-server \
-  xorg-apps \
+  xorg-apps xclip \
   mesa \
   xf86-input-synaptics \
   wpa_supplicant netctl \
