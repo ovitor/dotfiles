@@ -12,6 +12,7 @@
 "
 "PHPcomplete-extended
 autocmd  FileType  php setlocal omnifunc=phpcomplete_extended#CompletePHP
+let g:phpcomplete_index_composer_command='composer --no-ansi'
 
 "Makeshift configuration"
 let g:makeshift_chdir = 1
