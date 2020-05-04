@@ -5,9 +5,8 @@ set nocompatible
 filetype off
 
 "Source files"
+source ~/.vim/plug.vim
 source ~/.vim/projects.vim
-source ~/.vim/vundle.vim
-source ~/.vim/plugins.vim
 
 "netrw
 let g:netrw_banner = 0
