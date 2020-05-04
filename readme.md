@@ -4,9 +4,11 @@ my dotfiles for:
 
 * zsh
 * i3-gaps
+* rofi
 * alacritty
 * vim
 * tmux
+* zathura
 
 other miscellaneous are:
 

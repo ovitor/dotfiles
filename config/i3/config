@@ -19,10 +19,6 @@ set $outer 12
 gaps inner $inner
 gaps outer $outer
 
-# gap toggle
-bindsym $mod+g exec compton; gaps inner all set $inner; gaps outer all set $outer
-bindsym $mod+Ctrl+g exec pkill compton; gaps inner all set 0; gaps outer all set 0
-
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
@@ -76,10 +72,10 @@ bindsym $mod+e layout toggle split
 bindsym $mod+Shift+space floating toggle
 
 # change focus between tiling / floating windows
-bindsym $mod+a+space focus mode_toggle
+# bindsym $mod+a+space focus mode_toggle
 
 # focus the parent container
-bindsym $mod+a focus parent
+# bindsym $mod+a focus parent
 
 # focus the child container
 #bindsym $mod+d focus child
@@ -101,9 +97,9 @@ bindsym $mod+3 workspace $workspace3
 bindsym $mod+4 workspace $workspace4 
 bindsym $mod+5 workspace $workspace5
 bindsym $mod+6 workspace $workspace6
-bindsym $mod+7 workspace 7
-bindsym $mod+8 workspace 8
-bindsym $mod+9 workspace 9
+bindsym $mod+7 workspace $workspace7
+bindsym $mod+8 workspace $workspace8
+bindsym $mod+9 workspace $workspace9
 bindsym $mod+0 workspace $workspace0 
 
 # move focused container to workspace
@@ -113,9 +109,9 @@ bindsym $mod+Shift+3 move container to workspace $workspace3
 bindsym $mod+Shift+4 move container to workspace $workspace4
 bindsym $mod+Shift+5 move container to workspace $workspace5
 bindsym $mod+Shift+6 move container to workspace $workspace6
-bindsym $mod+Shift+7 move container to workspace 7
-bindsym $mod+Shift+8 move container to workspace 8
-bindsym $mod+Shift+9 move container to workspace 9
+bindsym $mod+Shift+7 move container to workspace $workspace7
+bindsym $mod+Shift+8 move container to workspace $workspace8
+bindsym $mod+Shift+9 move container to workspace $workspace9
 bindsym $mod+Shift+0 move container to workspace $workspace0
 
 # open applications in their workspaces
@@ -126,6 +122,9 @@ for_window [class="mpv"] floating enable
 for_window [class="feh"] floating enable 
 for_window [class="feh"] resize set 1750 890 
 for_window [class="feh"] move absolute position center
+for_window [class="sxiv"] floating enable 
+for_window [class="sxiv"] resize set 1750 890 
+for_window [class="sxiv"] move absolute position center
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
@@ -134,18 +133,8 @@ bindsym $mod+Shift+r restart
 # exit i3 (logs you out of your X session)
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
 
-# shutdown computer
-# changed default keybind to match vim style
-bindsym $mod+Shift+p exec "i3-nagbar -t warning -m 'You pressed the poweroff shortcut. Do you really want to poweroff the computer?' -b 'Yes, poweroff' 'systemctl poweroff'"
-
 # resize window (you can also use the mouse for that)
 mode "resize" {
-        # These bindings trigger as soon as you enter the resize mode
-
-        # Pressing left will shrink the window’s width.
-        # Pressing right will grow the window’s width.
-        # Pressing up will shrink the window’s height.
-        # Pressing down will grow the window’s height.
         bindsym h resize shrink width 10 px or 10 ppt
         bindsym j resize grow height 10 px or 10 ppt
         bindsym k resize shrink height 10 px or 10 ppt
@@ -164,26 +153,6 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
-# defining colors
-#set $bg-color 	         #2F343F
-#set $inactive-bg-color   #2F343F
-#set $text-color          #F3F4F5
-#set $inactive-text-color #676E7D
-#set $urgent-bg-color     #E53935
-
-# window colors
-#                       border              background         text                 indicator
-#client.focused          $bg-color           $bg-color          $text-color          $bg-color 
-#client.unfocused        $inactive-bg-color  $inactive-bg-color $inactive-text-color $bg-color 
-#client.focused_inactive $inactive-bg-color  $inactive-bg-color $inactive-text-color $bg-color 
-#client.urgent 		$urgent-bg-color    $urgent-bg-color   $text-color    	    $bg-color  
-
-# other configs
-bindsym $mod+d exec notify-send "Hora agora.." "`date`"
-
-# lock computer 
-bindsym $mod+Shiftx exec betterlockscreen -l dim 
-
 # launcher
 bindsym $mod+space exec --no-startup-id rofi -show drun 
 
@@ -192,9 +161,8 @@ bindsym $mod+Tab workspace next
 bindsym $mod+Shift+Tab workspace prev
 
 # screenshot key
-bindsym --release Print exec --no-startup-id "flameshot gui"
-bindsym --release Shift+Print exec --no-startup-id "maim -p 0 -c 0.96,0.5,0.09 $HOME/pictures/screenshot-$(date +%Y-%m-%d_%H-%M-%S).png"
-bindsym --release Control+Print exec --no-startup-id "maim -s -d 5 -p 0 -c 0.96,0.5,0.09 | convert - \( +clone -background black -shadow 40x5+0+0 \) +swap -background none -layers merge +repage $HOME/pictures/screenshot-$(date +%Y-%m-%d_%H-%M-%S).png"
+bindsym --release Control+Print exec --no-startup-id "flameshot gui"
+bindsym --release Print exec --no-startup-id "maim -s -d 3 -p 0 -c 0.96,0.5,0.09 | convert - \( +clone -background black -shadow 40x15+0+0 \) +swap -background none -layers merge +repage $HOME/pictures/screenshot-$(date +%Y-%m-%d_%H-%M-%S).png"
 
 # multimedia keys
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5% #increase sound volume
@@ -202,8 +170,8 @@ bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -5% #d
 bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle # mute sound
 
 # Sreen brightness controls
-bindsym XF86MonBrightnessUp exec xbacklight -inc 20 # increase screen brightness
-bindsym XF86MonBrightnessDown exec xbacklight -dec 20 # decrease screen brightness
+bindsym XF86MonBrightnessUp exec brightnessctl s 5%+ # increase screen brightness
+bindsym XF86MonBrightnessDown exec brightnessctl s 5%- # decrease screen brightness
 
 # Media player controls
 bindsym XF86AudioPlay exec playerctl play
@@ -211,8 +179,11 @@ bindsym XF86AudioPause exec playerctl pause
 bindsym XF86AudioNext exec playerctl next
 bindsym XF86AudioPrev exec playerctl previous
 
+# executing xflux to my location (hardcoded)
+exec xflux -l -3.731862 -g -38.526669
+
 # setting keyboard layout
-exec --no-startup-id setxkbmap -layout br
+exec --no-startup-id setxkbmap -model abnt2 -layout br -option ctrl:nocaps -option shif:boh_capslock
 
 # setting up gestures
 exec --no-startup-id libinput-gestures-setup start
@@ -222,9 +193,8 @@ exec_always feh --bg-fill $HOME/.dotfiles/wallpaper/wallpaper.jpg
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 exec_always --no-startup-id udiskie -at
 
-# exec_always picom -b
-# exec_always compton --config ~/.config/compton.conf 
-
+# executing dock tool
 exec --no-startup-id dockd --daemon
+
+# opening firefox at startup
 exec firefox
-exec xflux -l -3.731862 -g -38.526669
