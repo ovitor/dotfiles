@@ -1,6 +1,9 @@
 # Get OS software updates
 alias update='sudo pacman -Suy; trizen -Syyu'
 
+# SSH
+alias ssh="TERM=xterm-color ssh"
+
 # Simple tree
 alias tree="tree -C"
 alias t1="tree -L 1"
