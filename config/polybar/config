@@ -77,12 +77,12 @@ margin-top = 0
 
 	;font-N = <fontconfig pattern>;<vertical offset>
 	font-0 = Fira Sans:style=regular:size=6;2
-	font-1 = octicons:pixelsize=5;1
+	font-1 = MaterialIcons:size=10;1
 	font-2 = Fira Sans:pixelsize=5;1
 
-	modules-left   = workspaces
-	modules-center = time
-	modules-right  = cpu ram batteries wired-network wireless-network volume 
+	modules-left   = time 
+	modules-center = workspaces
+	modules-right  = wired-network wireless-network batteries volume 
 
 	fixed-center = true
 
