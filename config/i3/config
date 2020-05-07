@@ -88,6 +88,9 @@ set $workspace3 "3 "
 set $workspace4 "4 " 
 set $workspace5 "5 " 
 set $workspace6 "6 " 
+set $workspace6 "7 "
+set $workspace6 "8 "
+set $workspace6 "9 "
 set $workspace0 "10 " 
 
 # switch to workspace
@@ -196,5 +199,3 @@ exec_always --no-startup-id udiskie -at
 # executing dock tool
 exec --no-startup-id dockd --daemon
 
-# opening firefox at startup
-exec firefox
