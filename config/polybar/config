@@ -147,6 +147,8 @@ margin-top = 0
 	type          = internal/alsa
 	format-volume = <label-volume>
 
+  master-soundcard  = hw:1
+
 	label-volume            = "vol %percentage%"
 	label-volume-background = ${xrdb:color0}
 	label-volume-foreground = ${xrdb:color4}
