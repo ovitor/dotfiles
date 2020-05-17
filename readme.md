@@ -26,3 +26,16 @@ $ cd .dotfiles
 $ ./install
 ```
 
+To properly use vim-project plugin, you should populate a file like this
+into `$HOME/.vim/projects.vim`.
+
+```
+"Project configuration"
+"
+set rtp+=~/.vim/plugged/vim-project/
+
+call project#rc("~/projects")
+  Project '~/.dotfiles', 'dotfiles'
+
+"other projects
+```

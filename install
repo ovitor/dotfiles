@@ -9,12 +9,9 @@ mkdir -p /home/$USER/.config
 ln -sf ${BASEDIR}/gitconfig /home/$USER/.gitconfig
 echo "git configuration step executed"
 
-# ntp.br
-bash ${BASEDIR}/ntp/install.sh
-echo "ntp configuration step executed"
-
 # vimfiles
 ln -sf ${BASEDIR}/vim /home/$USER/.vim
+touch /home/$USER/.vim/projects.vim
 vim +PluginInstall +qall
 echo "vim configuration step executed"
 
@@ -63,7 +60,7 @@ echo "tmux configuration step executed"
 
 # vim directory
 rm -rf $HOME/.config/vim
-ln -sf ${BASEDIR}/vim /home/$USER/vim
+ln -sf ${BASEDIR}/vim /home/$USER/.vim
 echo "zathura step executed"
 
 # xresources
