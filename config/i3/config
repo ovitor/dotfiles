@@ -88,9 +88,9 @@ set $workspace3 "3 "
 set $workspace4 "4 " 
 set $workspace5 "5 " 
 set $workspace6 "6 " 
-set $workspace6 "7 "
-set $workspace6 "8 "
-set $workspace6 "9 "
+set $workspace7 "7 "
+set $workspace8 "8 "
+set $workspace9 "9 "
 set $workspace0 "10 " 
 
 # switch to workspace
@@ -168,8 +168,8 @@ bindsym --release Control+Print exec --no-startup-id "flameshot gui"
 bindsym --release Print exec --no-startup-id "maim -s -d 3 -p 0 -c 0.96,0.5,0.09 | convert - \( +clone -background black -shadow 40x15+0+0 \) +swap -background none -layers merge +repage $HOME/pictures/screenshot-$(date +%Y-%m-%d_%H-%M-%S).png"
 
 # multimedia keys
-bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5% #increase sound volume
-bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -5% #decrease sound volume
+bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5% # increase sound volume
+bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -5% # decrease sound volume
 bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle # mute sound
 
 # Sreen brightness controls
@@ -192,7 +192,7 @@ exec --no-startup-id setxkbmap -model abnt2 -layout br -option ctrl:nocaps -opti
 exec --no-startup-id libinput-gestures-setup start
 
 # executing applications
-exec_always feh --bg-fill $HOME/.dotfiles/wallpaper/wallpaper.jpg  
+exec_always feh --bg-fill $HOME/.dotfiles/wallpaper/wallpaper.jpg
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 exec_always --no-startup-id udiskie -at
 

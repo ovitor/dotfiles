@@ -23,7 +23,7 @@ augroup END
 map <silent> ff :Lexplore<CR>
 
 "Quickfix searches
-map qf :copen<cr>
+map fq :copen<cr>
 
 "General Config"
 syntax on
@@ -38,7 +38,7 @@ set noerrorbells visualbell t_vb=
 
 "General maps
 map fz :FZF<cr>
-nnoremap qq <C-w>w
+" nnoremap qq <C-w>w
 
 "Turn Off Swap Files"
 set noswapfile

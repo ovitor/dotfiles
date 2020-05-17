@@ -44,6 +44,11 @@ rm -rf $HOME/.config/zathura
 ln -sf ${BASEDIR}/config/zathura /home/$USER/.config/zathura
 echo "zathura step executed"
 
+# dunst directory
+rm -rf $HOME/.config/dunst
+ln -sf ${BASEDIR}/config/dunst /home/$USER/.config/dunst
+echo "dunst step executed"
+
 # local user share applications
 mkdir -p /home/$USER/.local/share/
 ln -sf ${BASEDIR}/local/share/applications /home/$USER/.local/share/applications

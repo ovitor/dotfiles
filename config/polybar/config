@@ -80,9 +80,9 @@ margin-top = 0
 	font-1 = MaterialIcons:size=10;1
 	font-2 = Fira Sans:pixelsize=5;1
 
-	modules-left   = time 
+	modules-left   = 
 	modules-center = workspaces
-	modules-right  = wired-network wireless-network batteries volume 
+	modules-right  = wired-network wireless-network batteries volume datetime
 
 	fixed-center = true
 
@@ -124,6 +124,18 @@ margin-top = 0
 	format        = <label>
 	label         = %title:0:50:%
 	label-padding = 1
+
+[module/datetime]
+	type = custom/script
+
+	exec = sh ~/.config/polybar/scripts/datetime.sh
+
+	label = %output%
+	label-background = ${xrdb:color0}
+	label-foreground = ${xrdb:color2}
+	label-padding    = 0
+
+	click-left = dunstify $(cal)
 
 [module/time]
 	type     = internal/date
