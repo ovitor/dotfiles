@@ -2,6 +2,9 @@
 
 BASEDIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
+# general commands
+mkdir -p /home/$USER/.config
+
 # gitfiles
 ln -sf ${BASEDIR}/gitconfig /home/$USER/.gitconfig
 echo "git configuration step executed"
