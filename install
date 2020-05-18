@@ -58,11 +58,6 @@ echo "local user share applications configuration step executed"
 ln -sf ${BASEDIR}/tmux.conf /home/$USER/.tmux.conf
 echo "tmux configuration step executed"
 
-# vim directory
-rm -rf $HOME/.config/vim
-ln -sf ${BASEDIR}/vim /home/$USER/.vim
-echo "zathura step executed"
-
 # xresources
 ln -sf ${BASEDIR}/Xresources /home/$USER/.Xresources
 echo "xresources configuration step executed"
