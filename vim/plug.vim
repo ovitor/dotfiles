@@ -25,6 +25,7 @@ Plug 'junegunn/fzf'
 " miscellaneous
 Plug 'dracula/vim'
 Plug 'amiorin/vim-project'
+Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug'] }
 
 " never used
 " Plugin 'lervag/vimtex'
