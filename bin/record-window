@@ -1,0 +1,4 @@
+#!/bin/bash
+
+WINDOW_ID=$(xwininfo -children | sed -e 's/^ *//'| grep -E "0x" | awk 'NR==1{print $4}')
+recordmydesktop --no-sound --windowid $WINDOW_ID

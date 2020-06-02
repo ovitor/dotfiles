@@ -54,6 +54,11 @@ mkdir -p /home/$USER/.local/share/
 ln -sf ${BASEDIR}/local/share/applications /home/$USER/.local/share/applications
 echo "local user share applications configuration step executed"
 
+# local binaries
+sudo ln -sf ${BASEDIR}/bin/connect /usr/local/bin/connect
+sudo ln -sf ${BASEDIR}/bin/transmission-client /usr/local/bin/transmission-client
+sudo ln -sf ${BASEDIR}/bin/record-window /usr/local/bin/record-window
+
 # tmux 
 ln -sf ${BASEDIR}/tmux.conf /home/$USER/.tmux.conf
 echo "tmux configuration step executed"
