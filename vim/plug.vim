@@ -4,7 +4,8 @@ call plug#begin('~/.vim/plugged')
 Plug 'editorconfig/editorconfig-vim'
 Plug 'airblade/vim-gitgutter'
 " Plugin 'posva/vim-vue'
-"
+Plug 'hashivim/vim-terraform'
+
 " completion
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 " Plugin 'honza/vim-snippets'
@@ -74,3 +75,4 @@ let vim_markdown_preview_browser='Firefox'
 
 "Terraform plugin
 let g:terraform_align=1
+let g:terraform_fmt_on_save=1
