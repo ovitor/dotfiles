@@ -80,7 +80,7 @@ margin-top = 0
 	font-1 = MaterialIcons:size=10;1
 	font-2 = Fira Sans:pixelsize=5;1
 
-	modules-left   = 
+	modules-left   = pomodoro
 	modules-center = workspaces
 	modules-right  = wired-network wireless-network batteries volume datetime
 
@@ -89,6 +89,11 @@ margin-top = 0
 ;--------------------------------------------
 ; modules                                   ;
 ;--------------------------------------------
+
+[module/pomodoro]
+  type = custom/script
+  exec = ~/.config/polybar/scripts/pomodoro.sh
+  interval = 5
 
 [module/batteries]
   type = custom/script
