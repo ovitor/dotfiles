@@ -5,6 +5,7 @@ Plug 'editorconfig/editorconfig-vim'
 Plug 'airblade/vim-gitgutter'
 " Plugin 'posva/vim-vue'
 Plug 'hashivim/vim-terraform'
+Plug 'dense-analysis/ale'
 
 " completion
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
@@ -76,3 +77,11 @@ let vim_markdown_preview_browser='Firefox'
 "Terraform plugin
 let g:terraform_align=1
 let g:terraform_fmt_on_save=1
+
+"ESlint configuration
+let g:ale_fixers = {
+  \ '*': ['remove_trailing_lines', 'trim_whitespace'],
+  \ 'javascript':['eslint'],
+\}
+let g:ale_fix_on_save = 1
+
