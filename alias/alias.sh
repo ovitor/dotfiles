@@ -5,12 +5,13 @@ alias update='sudo pacman -Suy; trizen -Syyu'
 alias ssh="TERM=xterm-color ssh"
 
 # Simple tree
+alias ip="ip -c"
 alias tree="tree -C"
 alias t1="tree -L 1"
 alias pbpaste="xclip -selection clipboard -o"
 alias pbcopy="xclip -selection c"
 
-# other programs 
+# other programs
 alias feh="feh -."
 alias 3n="nnn"
 
