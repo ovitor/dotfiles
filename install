@@ -35,7 +35,7 @@ rm -rf $HOME/.config/rofi
 ln -sf ${BASEDIR}/config/rofi /home/$USER/.config/rofi
 echo "rofi step executed"
 
-# user-dirs file 
+# user-dirs file
 ln -sf ${BASEDIR}/config/user-dirs.dirs /home/$USER/.config/user-dirs.dirs
 echo "xdg step executed"
 
@@ -58,8 +58,10 @@ echo "local user share applications configuration step executed"
 sudo ln -sf ${BASEDIR}/bin/connect /usr/local/bin/connect
 sudo ln -sf ${BASEDIR}/bin/transmission-client /usr/local/bin/transmission-client
 sudo ln -sf ${BASEDIR}/bin/record-window /usr/local/bin/record-window
+sudo ln -sf ${BASEDIR}/bin/i3-get-window-criteria.sh /usr/local/bin/i3-get-window-criteria
 
-# tmux 
+# tmux
+git clone https://github.com/tmux-plugins/tpm /home/$USER/.tmux/plugins/tpm
 ln -sf ${BASEDIR}/tmux.conf /home/$USER/.tmux.conf
 echo "tmux configuration step executed"
 

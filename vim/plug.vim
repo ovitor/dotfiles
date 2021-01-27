@@ -6,12 +6,13 @@ Plug 'airblade/vim-gitgutter'
 " Plugin 'posva/vim-vue'
 Plug 'hashivim/vim-terraform'
 Plug 'dense-analysis/ale'
+Plug 'saltstack/salt-vim'
 
 " completion
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 " Plugin 'honza/vim-snippets'
 
-" interface  
+" interface
 Plug 'itchyny/lightline.vim'
 " Plugin 'hashivim/vim-terraform'
 "
@@ -57,12 +58,13 @@ let g:phpcomplete_index_composer_command='composer --no-ansi'
 
 " CoC configuration
 let g:coc_global_extensions = [
-  \ 'coc-json', 
+  \ 'coc-json',
+  \ 'coc-yaml',
   \ 'coc-css',
   \ 'coc-snippets',
   \ 'coc-pairs',
-  \ 'coc-eslint', 
-  \ 'coc-prettier', 
+  \ 'coc-eslint',
+  \ 'coc-prettier',
   \ 'coc-phpls',
   \ 'coc-python',
   \ ]
@@ -84,4 +86,3 @@ let g:ale_fixers = {
   \ 'javascript':['eslint'],
 \}
 let g:ale_fix_on_save = 1
-

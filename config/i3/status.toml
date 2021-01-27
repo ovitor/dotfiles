@@ -1,0 +1,58 @@
+
+[theme]
+name = "plain"
+
+[theme.overrides]
+idle_bg = "#282A36"
+idle_fg = "#ffcccc"
+
+separator = ""
+separator_bg = "#282A36"
+separator_fg = ""
+
+good_bg = "#50FA7B"
+info_bg = "#282A36"
+
+warning_bg = "#FF5555"
+warning_fg = "#FFFFFF"
+
+critical_bg = "#FF5555"
+critical_fg = "#F8F8F2"
+
+[[block]]
+block = "custom"
+command = ''' ip a show dev tun0 | grep 'inet\ ' | awk '{print $2}' '''
+hide_when_empty = true
+
+[[block]]
+block = "net"
+device = "enp0s25"
+format = "{ip} {speed_down} {speed_up}"
+
+[[block]]
+block = "memory"
+display_type = "memory"
+format_mem = "{Mup}%"
+format_swap = "{SUp}%"
+
+[[block]]
+block = "cpu"
+interval = 1
+
+[[block]]
+block = "load"
+interval = 1
+format = "{1m}"
+
+[[block]]
+block = "sound"
+
+[[block]]
+block = "battery"
+format = "{percentage}% {time}"
+
+[[block]]
+block = "time"
+interval = 60
+format = "%a %d/%m %R"
+on_click = "gsimplecal"

@@ -12,3 +12,5 @@
 
 [web]
   browser = firefox
+[init]
+	defaultBranch = main
