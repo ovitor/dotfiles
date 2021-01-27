@@ -26,9 +26,9 @@ ln -sf ${BASEDIR}/config/i3 /home/$USER/.config/i3
 echo "i3 step executed"
 
 # polybar directory
-rm -rf $HOME/.config/polybar
-ln -sf ${BASEDIR}/config/polybar /home/$USER/.config/polybar
-echo "polybar step executed"
+# rm -rf $HOME/.config/polybar
+# ln -sf ${BASEDIR}/config/polybar /home/$USER/.config/polybar
+# echo "polybar step executed"
 
 # rofi directory
 rm -rf $HOME/.config/rofi
