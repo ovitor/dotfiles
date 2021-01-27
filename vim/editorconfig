@@ -18,6 +18,11 @@ charset = utf-8
 indent_style = space
 indent_size = 4
 
+# 2 space indentation
+[*.sls]
+indent_style = space
+indent_size = 2
+
 # Tab indentation (no size specified)
 [Makefile]
 indent_style = tab
@@ -31,4 +36,3 @@ indent_size = 2
 [{package.json,.travis.yml, .gitlab-ci.yml}]
 indent_style = space
 indent_size = 2
-
