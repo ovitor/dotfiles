@@ -1,44 +1,64 @@
-set selection-clipboard clipboard
+set selection-clipboard "clipboard"
+
+map <C-i> recolor
 
 # font
 set font "Fira Mono 10"
 
-# colors
-#let bg         = "#262626"
-#let black      = "#000000"
-#let white      = "#ffffff"
-#let lightgrey  = "#8A8A8A"
-#let mediumgrey = "#444444"
-#let darkgrey   = "#1b1d1e"
-#let blue       = "#0087af"
-#let green      = "#7baa14"
-#let orange     = "#d75f00"
 
-set default-fg "#8a8a8a"
-set default-bg "#1b1d1e"
+# a color theme
+#
 
-set tabbar-fg "#1b1d1d"
-set tabbar-bg "#8a8a8a"
+set notification-error-bg       "#ff5555" # Red
+set notification-error-fg       "#f8f8f2" # Foreground
+set notification-warning-bg     "#ffb86c" # Orange
+set notification-warning-fg     "#44475a" # Selection
+set notification-bg             "#282a36" # Background
+set notification-fg             "#f8f8f2" # Foreground
 
-set recolor-darkcolor  "#1b1d1e"
-set recolor-lightcolor "#8a8a8a"
+set completion-bg               "#282a36" # Background
+set completion-fg               "#6272a4" # Comment
+set completion-group-bg         "#282a36" # Background
+set completion-group-fg         "#6272a4" # Comment
+set completion-highlight-bg     "#44475a" # Selection
+set completion-highlight-fg     "#f8f8f2" # Foreground
 
-set statusbar-fg "#ffffff"
-set statusbar-bg "#403d3d"
+set index-bg                    "#282a36" # Background
+set index-fg                    "#f8f8f2" # Foreground
+set index-active-bg             "#44475a" # Current Line
+set index-active-fg             "#f8f8f2" # Foreground
 
-set inputbar-fg "#8a8a8a"
-set inputbar-bg "#1b1d1e"
+set inputbar-bg                 "#282a36" # Background
+set inputbar-fg                 "#f8f8f2" # Foreground
+set statusbar-bg                "#282a36" # Background
+set statusbar-fg                "#f8f8f2" # Foreground
 
-set completion-fg "#8a8a8a"
-set completion-bg "#1b1d1e"
+set highlight-color             "#ffb86c" # Orange
+set highlight-active-color      "#ff79c6" # Pink
 
-set completion-group-fg "#8a8a8a"
-set completion-group-bg "#222222"
+set default-bg                  "#282a36" # Background
+set default-fg                  "#f8f8f2" # Foreground
 
-set completion-highlight-fg "#1b1d1e"
-set completion-highlight-bg "#8a8a8a"
+set render-loading              true
+set render-loading-fg           "#282a36" # Background
+set render-loading-bg           "#f8f8f2" # Foreground
 
-# shortcuts
+#
+# Recolor mode settings
+#
+
+set recolor-lightcolor          "#282a36" # Background
+set recolor-darkcolor           "#f8f8f2" # Foreground
+
+#
+# Startup options
+#
+set adjust-open width
+set recolor true
+
+#
+# Shorcuts
+#
 map <C-s> toggle_statusbar
 
 map <C-i> zoom in
