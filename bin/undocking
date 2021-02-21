@@ -1,0 +1,8 @@
+#!/bin/bash
+
+# configuring external keyboard
+setxkbmap \
+  -model abnt2 \
+  -layout br \
+  -option ctrl:nocaps \
+  -option shift:both_capslock

@@ -1,0 +1,9 @@
+#!/bin/bash
+
+# configuring external keyboard
+setxkbmap \
+  -model thinkpad \
+  -layout us \
+  -variant alt-intl \
+  -option ctrl:nocaps \
+  -option shift:both_capslock

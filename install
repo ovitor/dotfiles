@@ -12,7 +12,7 @@ echo "git configuration step executed"
 # vimfiles
 ln -sf ${BASEDIR}/vim /home/$USER/.vim
 touch /home/$USER/.vim/projects.vim
-vim +PluginInstall +qall
+vim +PlugInstall +qall
 echo "vim configuration step executed"
 
 # alacritty directory
@@ -25,11 +25,6 @@ rm -rf $HOME/.config/i3
 ln -sf ${BASEDIR}/config/i3 /home/$USER/.config/i3
 echo "i3 step executed"
 
-# polybar directory
-# rm -rf $HOME/.config/polybar
-# ln -sf ${BASEDIR}/config/polybar /home/$USER/.config/polybar
-# echo "polybar step executed"
-
 # rofi directory
 rm -rf $HOME/.config/rofi
 ln -sf ${BASEDIR}/config/rofi /home/$USER/.config/rofi
@@ -38,6 +33,10 @@ echo "rofi step executed"
 # user-dirs file
 ln -sf ${BASEDIR}/config/user-dirs.dirs /home/$USER/.config/user-dirs.dirs
 echo "xdg step executed"
+
+# xinit file
+ln -sf ${BASEDIR}/config/xinitrc /home/$USER/.xinitrc
+echo "xinit step executed"
 
 # zathura directory
 rm -rf $HOME/.config/zathura
@@ -59,6 +58,10 @@ sudo ln -sf ${BASEDIR}/bin/connect /usr/local/bin/connect
 sudo ln -sf ${BASEDIR}/bin/transmission-client /usr/local/bin/transmission-client
 sudo ln -sf ${BASEDIR}/bin/record-window /usr/local/bin/record-window
 sudo ln -sf ${BASEDIR}/bin/i3-get-window-criteria.sh /usr/local/bin/i3-get-window-criteria
+sudo ln -sf ${BASEDIR}/bin/docking /usr/local/bin/docking
+sudo ln -sf ${BASEDIR}/bin/undocking /usr/local/bin/undocking
+sudo ln -sf ${BASEDIR}/bin/hive /usr/local/bin/hive
+sudo ln -sf ${BASEDIR}/bin/ifce /usr/local/bin/ifce
 
 # tmux
 git clone https://github.com/tmux-plugins/tpm /home/$USER/.tmux/plugins/tpm

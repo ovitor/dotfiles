@@ -12,8 +12,8 @@ URxvt*saveLines: 5000
 URxvt.transparent: false
 URxvt*.shading: 10
 URxvt.letterSpace: 0
-URxvt.font: xft:DejaVu Sans Mono:style=Book:pixelsize=12:antialias=true:hinting=true
-URxvt.boldFont: xft:DejaVu Sans Mono:style=Bold:bold:pixelsize=12:antialias=true:hinting=true
+URxvt.font: xft:Fira Mono:style=Book:pixelsize=12:antialias=true:hinting=true
+URxvt.boldFont: xft:Fira Mono:style=Bold:bold:pixelsize=12:antialias=true:hinting=true
 
 ! Meta modifier for keybindings
 URxvt.modifier: 0xfe03

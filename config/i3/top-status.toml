@@ -1,0 +1,52 @@
+
+[theme]
+name = "plain"
+
+[theme.overrides]
+idle_bg = "#282A36"
+idle_fg = "#ffcccc"
+
+separator = ""
+separator_bg = "#282A36"
+separator_fg = ""
+
+good_bg = "#50FA7B"
+good_fg = "#000000"
+info_bg = "#282A36"
+
+warning_bg = "#FF5555"
+warning_fg = "#FFFFFF"
+
+critical_bg = "#FF5555"
+critical_fg = "#F8F8F2"
+
+[[block]]
+block = "bluetooth"
+mac = "00:14:41:0C:0A:0F"
+label = " JVC"
+
+[[block]]
+block = "bluetooth"
+mac = "0C:A6:94:FC:18:49"
+label = " JBL GO"
+
+[[block]]
+block = "watson"
+show_time = true
+
+[[block]]
+block = "speedtest"
+bytes = true
+interval = 1800
+
+[[block]]
+block = "uptime"
+
+[[block]]
+block = "cpu"
+interval = 1
+
+[[block]]
+block = "load"
+interval = 1
+format = "{1m}"

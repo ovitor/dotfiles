@@ -1,0 +1,5 @@
+#!/bin/zsh
+
+( cd $HOME/hivelocity/ &&
+  tmux new-session -s hive \; new-window \; new-window \; select-window -t 0
+)

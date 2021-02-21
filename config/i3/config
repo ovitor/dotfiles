@@ -17,7 +17,7 @@ font pango:Fira Mono 8
 
 # general variables
 set $browser firefox
-set $term rxvt
+set $term alacritty
 set $inner 8
 set $outer 12
 
@@ -48,6 +48,10 @@ bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT
 bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -10% && $refresh_i3status
 bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle && $refresh_i3status
 bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle && $refresh_i3status
+bindsym XF86MonBrightnessUp exec --no-startup-id brightnessctl set +25
+bindsym XF86MonBrightnessDown exec --no-startup-id brightnessctl set 25-
+bindsym XF86Explorer exec --no-startup-id xdg-open $HOME
+
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
@@ -199,9 +203,29 @@ bindsym $mod+r mode "resize"
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 bar {
-  status_command i3status-rs ~/.config/i3/status.toml
-  font pango:Fira Mono 8, FontAwesome 8
-  height 28
+  status_command i3status-rs ~/.config/i3/bottom-status.toml
+  font pango:Fira Sans, FontAwesome
+  height 36
+  colors {
+    background #282A36
+    statusline #F8F8F2
+    separator  #44475A
+
+    focused_workspace  #44475A #44475A #F8F8F2
+    active_workspace   #282A36 #44475A #F8F8F2
+    inactive_workspace #282A36 #282A36 #BFBFBF
+    urgent_workspace   #FF5555 #FF5555 #F8F8F2
+    binding_mode       #FF5555 #FF5555 #F8F8F2
+  }
+}
+
+bar {
+  status_command i3status-rs ~/.config/i3/top-status.toml
+  position top
+  tray_output none
+  workspace_buttons no
+  font pango:Fira Sans, FontAwesome
+  height 36
   colors {
     background #282A36
     statusline #F8F8F2
@@ -220,18 +244,19 @@ exec xflux -l -3.731862 -g -38.526669
 
 # setting keyboard layout
 exec --no-startup-id setxkbmap -model abnt2 -layout br -option ctrl:nocaps -option shift:both_capslock
+# exec --no-startup-id setxkbmap -model thinkpad -layout us -variant alt-intl -option ctrl:nocaps -option shift:both_capslock
 
 # setting dual monitor configuration
-exec --no-startup-id sh $HOME/.screenlayout/dual-monitor.sh
+exec --no-startup-id sh $HOME/.screenlayout/dual-monitor-4k.sh
 
 # libinput gestures
 exec --no-startup-id libinput-gestures-setup start
 
 # utility to mount pendrives
-# exec --no-startup-id udiskie -at
+exec --no-startup-id udiskie -at
 
 # dock tool
-# exec --no-startup-id dockd --daemon
+exec --no-startup-id dockd --daemon
 
 # screenshot key
 # bindsym --release Control+Print exec --no-startup-id "flameshot gui"
@@ -245,7 +270,8 @@ bindsym $mod+Shift+a [instance="urxvt" title="vim *"] focus
 for_window [instance="sxiv"] floating enable
 for_window [class="sxiv"] move absolute position center
 for_window [instance="mpv"] floating enable
+for_window [class="Pavucontrol"] floating enable
 
 # open applications in their workspaces
 assign [class="Firefox"] $ws1
-assign [class="Slack"] $ws3
+# assign [class="Slack"] $ws3
