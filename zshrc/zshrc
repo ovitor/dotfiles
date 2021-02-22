@@ -12,7 +12,12 @@ HYPHEN_INSENSITIVE="true"
 ENABLE_CORRECTION="true"
 
 # Loading plugins
-plugins=(git git-flow httpie docker kubectl poetry tmux ansible)
+plugins=(git git-flow httpie docker kubectl poetry tmux ansible ssh-agent)
+
+# ssh-agent configuration
+zstyle :omz:plugins:ssh-agent agent-forwarding on
+zstyle :omz:plugins:ssh-agent identities id_rsa hivelocity_id_rsa ifce_id_rsa
+zstyle :omz:plugins:ssh-agent lifetime 8h
 
 # User configuration
 source $ZSH/oh-my-zsh.sh > /dev/null 2>&1
@@ -29,5 +34,14 @@ export LANG=en_US.UTF-8
 export PATH="$PATH:$HOME/.rvm/bin"
 export PATH="$PATH:$HOME/.local/bin"
 
+# Add gopath to another place
+export GOPATH=$HOME/.go
+
 autoload -U +X bashcompinit && bashcompinit
 complete -o nospace -C /usr/bin/vault vault
+complete -o nospace -C /usr/bin/terraform terraform
+
+# npm stuff
+# npm set prefix ~/.npm
+# PATH="$HOME/.npm/bin:$PATH"""
+# PATH="./node_modules/.bin:$PATH"""
