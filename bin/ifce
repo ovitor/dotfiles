@@ -1,5 +1,5 @@
 #!/bin/zsh
 
 ( cd $HOME/ifce/ &&
-  tmux new-session -s hive \; new-window \; new-window \; select-window -t 0
+  tmux new-session -s ifce \; new-window \; new-window \; select-window -t 0
 )
