@@ -12,6 +12,7 @@ alias pbpaste="xclip -selection clipboard -o"
 alias pbcopy="xclip -selection c"
 alias diff="diff --color=auto"
 alias grep="grep --color=auto"
+alias xterm="alacritty"
 
 # other programs
 alias feh="feh -."

@@ -29,6 +29,12 @@ hide_inactive = true
 [[block]]
 block = "net"
 device = "wlp3s0"
+format = "{ipv6}"
+hide_inactive = true
+
+[[block]]
+block = "net"
+device = "wlp3s0"
 format = "{ip} {speed_down} {speed_up}"
 hide_inactive = true
 
