@@ -1,0 +1,5 @@
+#!/bin/zsh
+
+( cd $HOME/hivelocity/credentials &&
+  tmux new-session -s hive-vpn \; send-keys 'sudo openvpn --config hivelocity-vpn-177.ovpn' C-m \; select-window -t 0
+)
