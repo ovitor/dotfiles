@@ -70,4 +70,3 @@ augroup auto_make
     "autocmd BufWritePost * silent make
     autocmd QuickFixCmdPost *make* cwindow
 augroup END
-

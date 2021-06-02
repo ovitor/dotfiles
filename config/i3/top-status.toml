@@ -36,7 +36,6 @@ show_time = true
 
 [[block]]
 block = "speedtest"
-bytes = true
 interval = 1800
 
 [[block]]
