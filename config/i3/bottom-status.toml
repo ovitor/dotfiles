@@ -48,7 +48,6 @@ hide_inactive = true
 block = "memory"
 display_type = "memory"
 format_mem = "{mem_used_percents}"
-format_swap = "{SUp}%"
 
 [[block]]
 block = "sound"

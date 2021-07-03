@@ -22,6 +22,11 @@ critical_fg = "#F8F8F2"
 
 [[block]]
 block = "bluetooth"
+mac = "EC:4C:47:F9:9F:CD"
+label = " XT91"
+
+[[block]]
+block = "bluetooth"
 mac = "00:14:41:0C:0A:0F"
 label = " JVC"
 
