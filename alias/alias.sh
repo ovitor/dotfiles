@@ -30,3 +30,9 @@ alias enabletrack="xinput set-prop 17 'Device Enabled' 1"
 
 # git aliases
 alias glog="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
+
+# kubectl aliases
+alias kcontext="kubectx"
+alias kctx="kubectx"
+alias knamespace="kubens"
+alias kns="kubens"
