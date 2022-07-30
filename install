@@ -20,6 +20,11 @@ rm -rf $HOME/.config/alacritty
 ln -sf ${BASEDIR}/config/alacritty /home/$USER/.config/alacritty
 echo "alacritty step executed"
 
+# zellij directory
+rm -rf $HOME/.config/zellij
+ln -sf ${BASEDIR}/config/zellij /home/$USER/.config/zellij
+echo "zellij step executed"
+
 # i3 directory
 rm -rf $HOME/.config/i3
 ln -sf ${BASEDIR}/config/i3 /home/$USER/.config/i3
