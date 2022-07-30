@@ -2,11 +2,14 @@
 scriptencoding utf-8
 set encoding=utf-8
 set nocompatible
-filetype off
+"filetype off
 
 "Source files"
 source ~/.vim/plug.vim
 source ~/.vim/projects.vim
+
+"jenkinsfile syntax
+au BufNewFile,BufRead Jenkinsfile setf groovy
 
 "netrw
 let g:netrw_banner = 0
@@ -34,6 +37,7 @@ set nowrap
 set hlsearch
 set laststatus=2
 filetype plugin on
+filetype plugin indent on
 set noerrorbells visualbell t_vb=
 
 "General maps
