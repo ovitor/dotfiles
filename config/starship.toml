@@ -1,0 +1,48 @@
+add_newline = false
+format = """
+$username\
+$hostname\
+$directory\
+$git_branch\
+$git_commit\
+$git_state\
+$git_metrics\
+$git_status\
+$character"""
+
+right_format = """
+$kubernetes\
+$gcloud"""
+
+[fill]
+symbol = " "
+
+[username]
+show_always = true
+
+[directory]
+truncation_length = 8
+truncation_symbol = "../"
+read_only = " 🔒"
+
+[git_metrics]
+disabled = true 
+added_style = "green"
+deleted_style = "red"
+format = '\(([+$added]($added_style))/([-$deleted]($deleted_style))\) '
+
+[kubernetes]
+disabled = false
+style = "dimmed green"
+format = '[$symbol\($context( \($namespace\))\)]($style) '
+
+[kubernetes.context_aliases]
+".*washington-dev" = "washington-dev"
+".*washington-qa" = "washington-qa"
+".*[development]-.*nonprodcluster-ng" = "decent-nonprod (development)"
+
+#[aws]
+#format = '[(aws \($profile\) )(\[$duration\] )]($style)'
+
+[gcloud]
+format = '[GCP \($project\)]($style) '

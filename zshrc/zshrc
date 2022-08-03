@@ -9,7 +9,7 @@ ZSH_THEME="daveverwer"
 HYPHEN_INSENSITIVE="true"
 
 # Uncomment the following line to enable command auto-correction.
-ENABLE_CORRECTION="true"
+#ENABLE_CORRECTION="true"
 
 # Loading plugins
 plugins=(git git-flow httpie docker kubectl poetry tmux ansible ssh-agent)
@@ -29,7 +29,6 @@ source ~/.dotfiles/alias/alias.sh > /dev/null 2>&1
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
 
-
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
 export PATH="$PATH:$HOME/.rvm/bin"
 export PATH="$PATH:$HOME/.local/bin"
@@ -38,10 +37,11 @@ export PATH="$PATH:$HOME/.local/bin"
 export GOPATH=$HOME/.go
 
 autoload -U +X bashcompinit && bashcompinit
-complete -o nospace -C /usr/bin/vault vault
-complete -o nospace -C /usr/bin/terraform terraform
+# complete -o nospace -C /usr/bin/vault vault
+# complete -o nospace -C /usr/bin/terraform terraform
 
 # npm stuff
 # npm set prefix ~/.npm
 # PATH="$HOME/.npm/bin:$PATH"""
 # PATH="./node_modules/.bin:$PATH"""
+eval "$(starship init zsh)"
