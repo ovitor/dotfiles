@@ -15,6 +15,11 @@ touch /home/$USER/.vim/projects.vim
 vim +PlugInstall +qall
 echo "vim configuration step executed"
 
+# nvim
+ln -sf ${BASEDIR}/config/nvim /home/$USER/.config/nvim
+nvim +PackerInstall +qall
+echo "nvim configuration step executed"
+
 # alacritty directory
 rm -rf $HOME/.config/alacritty
 ln -sf ${BASEDIR}/config/alacritty /home/$USER/.config/alacritty
