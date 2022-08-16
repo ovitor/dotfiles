@@ -45,4 +45,4 @@ format = '[$symbol\($context( \($namespace\))\)]($style) '
 #format = '[(aws \($profile\) )(\[$duration\] )]($style)'
 
 [gcloud]
-format = '[GCP \($project\)]($style) '
+format = '[$active ☁️ \($project\)]($style) '
