@@ -3,6 +3,7 @@
 [user]
 	name = Vitor Carvalho
 	email = vcml@pm.me
+	signingkey = FC9FE75A
 
 [push]
   default = simple
@@ -16,3 +17,5 @@
 	defaultBranch = main
 [url "git@github.com:"]
 	insteadOf = git@github.com/
+[credential]
+	helper = store

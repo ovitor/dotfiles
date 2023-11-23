@@ -30,53 +30,14 @@ rm -rf $HOME/.config/zellij
 ln -sf ${BASEDIR}/config/zellij /home/$USER/.config/zellij
 echo "zellij step executed"
 
-# i3 directory
-rm -rf $HOME/.config/i3
-ln -sf ${BASEDIR}/config/i3 /home/$USER/.config/i3
-echo "i3 step executed"
-
-# rofi directory
-rm -rf $HOME/.config/rofi
-ln -sf ${BASEDIR}/config/rofi /home/$USER/.config/rofi
-echo "rofi step executed"
-
 # user-dirs file
 ln -sf ${BASEDIR}/config/user-dirs.dirs /home/$USER/.config/user-dirs.dirs
 echo "xdg step executed"
-
-# xinit file
-ln -sf ${BASEDIR}/config/xinitrc /home/$USER/.xinitrc
-echo "xinit step executed"
-
-# zathura directory
-rm -rf $HOME/.config/zathura
-ln -sf ${BASEDIR}/config/zathura /home/$USER/.config/zathura
-echo "zathura step executed"
-
-# dunst directory
-rm -rf $HOME/.config/dunst
-ln -sf ${BASEDIR}/config/dunst /home/$USER/.config/dunst
-echo "dunst step executed"
 
 # local user share applications
 mkdir -p /home/$USER/.local/share/
 ln -sf ${BASEDIR}/local/share/applications /home/$USER/.local/share/applications
 echo "local user share applications configuration step executed"
-
-# local binaries
-sudo ln -sf ${BASEDIR}/bin/connect /usr/local/bin/connect
-sudo ln -sf ${BASEDIR}/bin/transmission-client /usr/local/bin/transmission-client
-sudo ln -sf ${BASEDIR}/bin/record-window /usr/local/bin/record-window
-sudo ln -sf ${BASEDIR}/bin/i3-get-window-criteria.sh /usr/local/bin/i3-get-window-criteria
-sudo ln -sf ${BASEDIR}/bin/docking /usr/local/bin/docking
-sudo ln -sf ${BASEDIR}/bin/undocking /usr/local/bin/undocking
-sudo ln -sf ${BASEDIR}/bin/hive /usr/local/bin/hive
-sudo ln -sf ${BASEDIR}/bin/ifce /usr/local/bin/ifce
-
-# tmux
-git clone https://github.com/tmux-plugins/tpm /home/$USER/.tmux/plugins/tpm
-ln -sf ${BASEDIR}/tmux.conf /home/$USER/.tmux.conf
-echo "tmux configuration step executed"
 
 # xresources
 ln -sf ${BASEDIR}/Xresources /home/$USER/.Xresources
@@ -90,7 +51,3 @@ echo "zsh configuration step executed"
 # starship
 ln -sf ${BASEDIR}/config/starship.toml /home/$USER/.config/starship.toml
 echo "starship step executed"
-
-# related to x250 thinkpad model
-# configuration of trackpad
-sudo ln -sf ${BASEDIR}/x250/70-synpatics.conf /etc/X11/xorg.conf.d/70-synaptics.conf

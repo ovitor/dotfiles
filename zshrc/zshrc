@@ -15,9 +15,9 @@ HYPHEN_INSENSITIVE="true"
 plugins=(git git-flow httpie docker kubectl poetry tmux ansible ssh-agent)
 
 # ssh-agent configuration
-zstyle :omz:plugins:ssh-agent agent-forwarding on
-zstyle :omz:plugins:ssh-agent identities id_rsa hivelocity_id_rsa ifce_id_rsa
-zstyle :omz:plugins:ssh-agent lifetime 8h
+# zstyle :omz:plugins:ssh-agent agent-forwarding on
+# zstyle :omz:plugins:ssh-agent identities id_rsa hivelocity_id_rsa ifce_id_rsa
+# zstyle :omz:plugins:ssh-agent lifetime 8h
 
 # User configuration
 source $ZSH/oh-my-zsh.sh > /dev/null 2>&1
@@ -40,8 +40,4 @@ autoload -U +X bashcompinit && bashcompinit
 # complete -o nospace -C /usr/bin/vault vault
 # complete -o nospace -C /usr/bin/terraform terraform
 
-# npm stuff
-# npm set prefix ~/.npm
-# PATH="$HOME/.npm/bin:$PATH"""
-# PATH="./node_modules/.bin:$PATH"""
 eval "$(starship init zsh)"

@@ -11,7 +11,9 @@ $git_status\
 $character"""
 
 right_format = """
+$openstack\
 $kubernetes\
+$aws\
 $gcloud"""
 
 [fill]
@@ -26,7 +28,7 @@ truncation_symbol = "../"
 read_only = " 🔒"
 
 [git_metrics]
-disabled = true 
+disabled = true
 added_style = "green"
 deleted_style = "red"
 format = '\(([+$added]($added_style))/([-$deleted]($deleted_style))\) '
@@ -39,10 +41,17 @@ format = '[$symbol\($context( \($namespace\))\)]($style) '
 [kubernetes.context_aliases]
 ".*washington-dev" = "washington-dev"
 ".*washington-qa" = "washington-qa"
-".*[development]-.*nonprodcluster-ng" = "decent-nonprod (development)"
+".*[development]-.*nonprodcluster-ng" = "decent-nonprod [DEV]"
+".*[production].*prodcluster-gitops" = "decent-prod [PRODUCTION]"
+".*/liverpool-prod" = "liverpool [PRODUCTION]"
+".*/liverpool-qa" = "liverpool [QA]"
+".*/liverpool-staging" = "liverpool [STAGING]"
 
 #[aws]
 #format = '[(aws \($profile\) )(\[$duration\] )]($style)'
 
 [gcloud]
 format = '[$active ☁️ \($project\)]($style) '
+
+[aws]
+format = '[$profile ☁️ \($region\)]($style) '
