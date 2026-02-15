@@ -75,7 +75,8 @@ echo "==> Creating symlinks..."
 echo ""
 
 echo "--- Shell ---"
-link_file "$DOTFILES_DIR/zsh/.zshrc" "$HOME/.zshrc"
+link_file "$DOTFILES_DIR/zshrc/zshrc" "$HOME/.zshrc"
+link_file "$DOTFILES_DIR/zshrc/functions.sh" "$HOME/.dotfiles/zsh/functions.sh"
 # link_file "$DOTFILES_DIR/env/env.sh" "$HOME/.dotfiles/env/env.sh"
 # link_file "$DOTFILES_DIR/alias/alias.sh" "$HOME/.dotfiles/alias/alias.sh"
 

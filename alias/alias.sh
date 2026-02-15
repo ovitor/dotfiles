@@ -30,17 +30,3 @@ alias kns="kubens"
 if [ -f ~/.dotfiles/alias/alias-private.sh ]; then
     source ~/.dotfiles/alias/alias-private.sh
 fi
-
-# tests
-kgpbn() {
-  kubectl get pods -A --field-selector=spec.nodeName=$1
-}
-
-# start work
-start-work() {
-  export WORK=true
-}
-
-stop-work() {
-  unset WORK
-}
