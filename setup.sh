@@ -76,8 +76,8 @@ echo ""
 
 echo "--- Shell ---"
 link_file "$DOTFILES_DIR/zsh/.zshrc" "$HOME/.zshrc"
-link_file "$DOTFILES_DIR/env/env.sh" "$HOME/.dotfiles/env/env.sh"
-link_file "$DOTFILES_DIR/alias/alias.sh" "$HOME/.dotfiles/alias/alias.sh"
+# link_file "$DOTFILES_DIR/env/env.sh" "$HOME/.dotfiles/env/env.sh"
+# link_file "$DOTFILES_DIR/alias/alias.sh" "$HOME/.dotfiles/alias/alias.sh"
 
 # alias-private.sh (not tracked in git, create from template if missing)
 PRIVATE_ALIAS="$DOTFILES_DIR/alias/alias-private.sh"
