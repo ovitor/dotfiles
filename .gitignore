@@ -1,27 +1,20 @@
-# DS_Store files
-*.DS_Store*
+# OS
+.DS_Store
+Thumbs.db
 
-# SSH related files
+# SSH
 *id_rsa*
 *id_dsa*
 *id_ecdsa*
 *authorized_keys*
 *known_hosts*
 
-# History files
-*history*
+# Temp
+*.swp
+*.tmp
 
-# vim things
-vim/.netrwhist
-vim/bundle/*
-vim/projects.vim
+# Private
+alias/alias-private.sh
 
-# mpd thins
-config/mpd/state
-config/mpd/pid
-
-# local things
+# Local
 local
-
-# Tokens
-tokens

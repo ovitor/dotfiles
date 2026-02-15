@@ -1,0 +1,36 @@
+#!/usr/bin/env bash
+
+set -e
+
+if [ -n "$ZELLIJ_SESSION_NAME" ]; then
+  exit 0
+fi
+
+SESSION="$1"
+DIR="$2"
+
+if [ -z "$SESSION" ]; then
+  SESSIONS=$(zellij ls -s 2>/dev/null || true)
+
+  [ -z "$SESSIONS" ] && exit 0
+
+  CHOSEN=$(echo "$SESSIONS" | fzf)
+  [ -z "$CHOSEN" ] && exit 0
+
+  exec zellij attach "$CHOSEN"
+fi
+
+if [ "$SESSION" = "." ]; then
+  SESSION="$(basename "$PWD")"
+fi
+
+if [ -z "$DIR" ]; then
+  DIR="$PWD"
+fi
+
+if zellij ls -s | grep -qx "$SESSION"; then
+  exec zellij attach "$SESSION"
+fi
+
+cd "$DIR"
+exec zellij --new-session-with-layout dev --session "$SESSION"
