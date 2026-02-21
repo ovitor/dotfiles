@@ -33,4 +33,4 @@ if zellij ls -s | grep -qx "$SESSION"; then
 fi
 
 cd "$DIR"
-exec zellij --new-session-with-layout dev --session "$SESSION"
+exec zellij --new-session-with-layout development --session "$SESSION"

@@ -43,3 +43,4 @@ autoload -U +X bashcompinit && bashcompinit
 # complete -o nospace -C /usr/bin/terraform terraform
 
 eval "$(starship init zsh)"
+eval "$(direnv hook zsh)"

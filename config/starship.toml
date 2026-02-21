@@ -11,6 +11,7 @@ $git_status\
 $character"""
 
 right_format = """
+$terraform
 """
 
 [fill]
@@ -29,6 +30,9 @@ disabled = true
 added_style = "green"
 deleted_style = "red"
 format = '\(([+$added]($added_style))/([-$deleted]($deleted_style))\) '
+
+[terraform]
+format = '[$workspace]($style) \([$version]($style)\)'
 
 #[gcloud]
 #format = '[$active ☁️ \($project\)]($style) '
