@@ -3,6 +3,7 @@ format = """
 $username\
 $hostname\
 $directory\
+$python\
 $git_branch\
 $git_commit\
 $git_state\
@@ -11,10 +12,8 @@ $git_status\
 $character"""
 
 right_format = """
-$openstack\
-$kubernetes\
-$aws\
-$gcloud"""
+$terraform
+"""
 
 [fill]
 symbol = " "
@@ -33,25 +32,11 @@ added_style = "green"
 deleted_style = "red"
 format = '\(([+$added]($added_style))/([-$deleted]($deleted_style))\) '
 
-[kubernetes]
-disabled = false
-style = "dimmed green"
-format = '[$symbol\($context( \($namespace\))\)]($style) '
+[terraform]
+format = '[$workspace]($style) \([$version]($style)\)'
 
-[kubernetes.context_aliases]
-".*washington-dev" = "washington-dev"
-".*washington-qa" = "washington-qa"
-".*[development]-.*nonprodcluster-ng" = "decent-nonprod [DEV]"
-".*[production].*prodcluster-gitops" = "decent-prod [PRODUCTION]"
-".*/liverpool-prod" = "liverpool [PRODUCTION]"
-".*/liverpool-qa" = "liverpool [QA]"
-".*/liverpool-staging" = "liverpool [STAGING]"
+#[gcloud]
+#format = '[$active ☁️ \($project\)]($style) '
 
 #[aws]
-#format = '[(aws \($profile\) )(\[$duration\] )]($style)'
-
-[gcloud]
-format = '[$active ☁️ \($project\)]($style) '
-
-[aws]
-format = '[$profile ☁️ \($region\)]($style) '
+#format = '[$profile ☁️ \($region\)]($style) '

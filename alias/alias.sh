@@ -15,6 +15,7 @@ alias pbcopy="xclip -selection c"
 alias diff="diff --color=auto"
 alias grep="grep --color=auto"
 alias xterm="alacritty"
+alias vim="nvim"
 
 # git aliases
 alias glog="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cd) %C(bold blue)<%an>%Creset' --abbrev-commit"
@@ -25,13 +26,7 @@ alias kctx="kubectx"
 alias knamespace="kubens"
 alias kns="kubens"
 
-# bluecharm
-alias rds-liverpool-qa="pgcli --host liverpool-qa-postgres.cprfqyhauqd0.us-east-1.rds.amazonaws.com --port 5432 --username liverpool --password --dbname liverpool --ssh-tunnel bluecharm-bastion-qa"
-alias rds-liverpool-prod="pgcli --host liverpool-prod-postgres.cehsffbwqemh.ca-central-1.rds.amazonaws.com --port 5432 --username liverpool --password --dbname liverpool --ssh-tunnel bluecharm-bastion-prod"
-alias rds-reports-qa="pgcli --host reports-qa-postgres.cprfqyhauqd0.us-east-1.rds.amazonaws.com --port 5432 --username report --password --dbname reports --ssh-tunnel bluecharm-bastion-qa"
-
-# caju
-alias db-caju-boba="pgcli --host lujpjqftvhhbpbfcreej.db.sa-east-1.nhost.run --port 5432 --username postgres --password --dbname lujpjqftvhhbpbfcreej"
-
-# tmp
-alias rds-test-prod="pgcli --host liverpool-prod-postgres.cehsffbwqemh.ca-central-1.rds.amazonaws.com --port 5432 --username liverpool --password --dbname liverpool"
+# Private aliases (DB connections, etc)
+if [ -f ~/.dotfiles/alias/alias-private.sh ]; then
+    source ~/.dotfiles/alias/alias-private.sh
+fi
