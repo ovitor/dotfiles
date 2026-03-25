@@ -366,6 +366,7 @@ plugins {
     tab-bar { path "tab-bar"; }
     status-bar { path "status-bar"; }
     strider { path "strider"; }
+    zjstatus { path "~/.config/zellij/plugins/zjstatus.wasm"; }
 }
 themes {
     default {

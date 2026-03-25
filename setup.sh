@@ -43,7 +43,7 @@ echo "==> Installing oh-my-zsh..."
 if [ -d "$HOME/.oh-my-zsh" ]; then
     echo "  [EXISTS] ~/.oh-my-zsh already exists"
 else
-    git clone https://github.com/oh-my-zsh/oh-my-zsh.git ~/.oh-my-zsh
+    git clone git@github.com:ohmyzsh/ohmyzsh.git ~/.oh-my-zsh
     echo "  [DONE] oh-my-zsh installed"
 fi
 echo ""
@@ -59,13 +59,13 @@ if [ -d "$NVIM_TARGET" ]; then
     echo
     if [[ $REPLY =~ ^[Yy]$ ]]; then
         rm -rf "$NVIM_TARGET"
-        git clone https://github.com/ovitor/config.nvim.git "$NVIM_TARGET"
+        git clone git@github.com:ovitor/config.nvim.git "$NVIM_TARGET"
         echo "  [DONE] nvim config re-cloned"
     else
         echo "  [SKIP] keeping existing nvim config"
     fi
 else
-    git clone https://github.com/ovitor/config.nvim.git "$NVIM_TARGET"
+    git clone git@github.com:ovitor/config.nvim.git "$NVIM_TARGET"
     echo "  [DONE] nvim config cloned"
 fi
 echo ""
