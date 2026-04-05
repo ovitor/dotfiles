@@ -21,10 +21,10 @@ alias vim="nvim"
 alias glog="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cd) %C(bold blue)<%an>%Creset' --abbrev-commit"
 
 # kubectl aliases
-alias kcontext="kubectx"
-alias kctx="kubectx"
-alias knamespace="kubens"
-alias kns="kubens"
+alias kcontext="kubie ctx"
+alias kctx="kubie ctx"
+alias knamespace="kubie ns"
+alias kns="kubie ns"
 
 # Private aliases (DB connections, etc)
 if [ -f ~/.dotfiles/alias/alias-private.sh ]; then
